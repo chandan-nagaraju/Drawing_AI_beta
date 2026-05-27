@@ -1,0 +1,4048 @@
+[
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "21.05.2024",
+        "nominal": null,
+        "nominal_text": "21.05.2024",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 126,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            874.5800170898438,
+            613.822265625,
+            923.7633666992188,
+            623.6181030273438
+        ],
+        "nearest_geometry_bbox": [
+            867.401611328125,
+            610.9930419921875,
+            930.9288940429688,
+            626.4569091796875
+        ],
+        "distance": 0.008026181064874667,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "21.05.2024",
+        "nominal": null,
+        "nominal_text": "21.05.2024",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 126,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            935.1400146484375,
+            613.822265625,
+            984.3233642578125,
+            623.6181030273438
+        ],
+        "nearest_geometry_bbox": [
+            926.9291381835938,
+            610.9930419921875,
+            992.5208129882812,
+            626.4569091796875
+        ],
+        "distance": 0.00824816238644015,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "21.05.2024",
+        "nominal": null,
+        "nominal_text": "21.05.2024",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 126,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1060.6300048828125,
+            613.822265625,
+            1109.8133544921875,
+            623.6181030273438
+        ],
+        "nearest_geometry_bbox": [
+            1054.4881591796875,
+            610.9930419921875,
+            1115.951171875,
+            626.4569091796875
+        ],
+        "distance": 0.0051974042825935676,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1mm",
+        "nominal": 1.0,
+        "nominal_text": "1mm",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 128,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            325.2269287109375,
+            622.5977783203125,
+            343.66619873046875,
+            634.8395385742188
+        ],
+        "nearest_geometry_bbox": [
+            73.19000244140625,
+            695.1600341796875,
+            507.6000061035156,
+            695.1600341796875
+        ],
+        "distance": 79.71823065672541,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2062",
+        "nominal": 2062.0,
+        "nominal_text": "2062",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 133,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            720.1592407226562,
+            645.017822265625,
+            744.7449340820312,
+            657.2595825195312
+        ],
+        "nearest_geometry_bbox": [
+            698.8900146484375,
+            623.6199951171875,
+            698.8900146484375,
+            703.52001953125
+        ],
+        "distance": 35.790362806793794,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "76.0",
+        "nominal": 76.0,
+        "nominal_text": "76.0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 119,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            656.7913208007812,
+            579.1777954101562,
+            681.3770141601562,
+            591.4195556640625
+        ],
+        "nearest_geometry_bbox": [
+            518.7401733398438,
+            564.0947265625,
+            807.1795654296875,
+            618.7372436523438
+        ],
+        "distance": 8.656125203812028,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 122,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            699.8162841796875,
+            591.4177856445312,
+            705.9627075195312,
+            603.6595458984375
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            863.9099731445312,
+            623.6199951171875
+        ],
+        "distance": 29.1325204898353,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2062",
+        "nominal": 2062.0,
+        "nominal_text": "2062",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 129,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            720.1592407226562,
+            625.0377807617188,
+            744.7449340820312,
+            637.279541015625
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            863.9099731445312,
+            623.6199951171875
+        ],
+        "distance": 43.20489517565022,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2062",
+        "nominal": 2062.0,
+        "nominal_text": "2062",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 137,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            720.1592407226562,
+            664.98779296875,
+            744.7449340820312,
+            677.2295532226562
+        ],
+        "nearest_geometry_bbox": [
+            698.8900146484375,
+            623.6199951171875,
+            698.8900146484375,
+            703.52001953125
+        ],
+        "distance": 34.39831695232554,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 15,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            925.747802734375,
+            67.73777770996094,
+            931.8942260742188,
+            79.97956848144531
+        ],
+        "nearest_geometry_bbox": [
+            905.3978881835938,
+            39.968505859375,
+            992.2098999023438,
+            60.3297119140625
+        ],
+        "distance": 31.00740094934756,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 15,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            956.4799194335938,
+            67.73777770996094,
+            962.6263427734375,
+            79.97956848144531
+        ],
+        "nearest_geometry_bbox": [
+            905.3978881835938,
+            39.968505859375,
+            992.2098999023438,
+            60.3297119140625
+        ],
+        "distance": 26.032470731065604,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "33",
+        "nominal": 33.0,
+        "nominal_text": "33",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 15,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1024.090576171875,
+            67.73777770996094,
+            1036.38330078125,
+            79.97956848144531
+        ],
+        "nearest_geometry_bbox": [
+            864.7616577148438,
+            61.0400390625,
+            1168.6795654296875,
+            98.9278564453125
+        ],
+        "distance": 14.839477168089344,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "23.02.2025",
+        "nominal": null,
+        "nominal_text": "23.02.2025",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 18,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1064.4300537109375,
+            84.88229370117188,
+            1113.6134033203125,
+            94.6781234741211
+        ],
+        "nearest_geometry_bbox": [
+            1059.72998046875,
+            63.8699951171875,
+            1059.72998046875,
+            96.09002685546875
+        ],
+        "distance": 30.88770591459475,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "55",
+        "nominal": 55.0,
+        "nominal_text": "55",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 18,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            516.8699951171875,
+            80.51780700683594,
+            530.5828247070312,
+            92.75959777832031
+        ],
+        "nearest_geometry_bbox": [
+            514.0321655273438,
+            80.57891845703125,
+            533.4130859375,
+            93.3858642578125
+        ],
+        "distance": 0.3437097970254495,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "00131453",
+        "nominal": 131453.0,
+        "nominal_text": "00131453",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 16,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1069.3499755859375,
+            75.08230590820312,
+            1108.6966552734375,
+            84.87813568115234
+        ],
+        "nearest_geometry_bbox": [
+            1059.72998046875,
+            63.8699951171875,
+            1059.72998046875,
+            96.09002685546875
+        ],
+        "distance": 29.293334961688856,
+        "glyph_count": 8
+    },
+    {
+        "page": 1,
+        "entity_type": "SRC_dimension",
+        "display_text": "1 X 4",
+        "nominal": null,
+        "nominal_text": "1 X 4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 165,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "IMPLICIT_X_BETWEEN_NUMBERS",
+        "operator": "X",
+        "values": [
+            1,
+            4
+        ],
+        "text_bbox": [
+            710.7000122070312,
+            800.2078247070312,
+            729.1392822265625,
+            812.4495849609375
+        ],
+        "nearest_geometry_bbox": [
+            695.692626953125,
+            797.3712768554688,
+            744.1485595703125,
+            815.283935546875
+        ],
+        "distance": 0.0014498258691674443,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 165,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            90.5317611694336,
+            801.2022705078125,
+            94.71234893798828,
+            810.9981079101562
+        ],
+        "nearest_geometry_bbox": [
+            75.15721130371094,
+            788.5775146484375,
+            169.1385498046875,
+            813.8360595703125
+        ],
+        "distance": 29.928577573846464,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 165,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            94.71234893798828,
+            801.2022705078125,
+            98.89293670654297,
+            810.9981079101562
+        ],
+        "nearest_geometry_bbox": [
+            75.15721130371094,
+            788.5775146484375,
+            169.1385498046875,
+            813.8360595703125
+        ],
+        "distance": 25.81330005630221,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "7",
+        "nominal": 7.0,
+        "nominal_text": "7",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 165,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            98.89293670654297,
+            801.2022705078125,
+            103.07352447509766,
+            810.9981079101562
+        ],
+        "nearest_geometry_bbox": [
+            75.15721130371094,
+            788.5775146484375,
+            169.1385498046875,
+            813.8360595703125
+        ],
+        "distance": 21.72297843714844,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 165,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            103.07352447509766,
+            801.2022705078125,
+            107.25411224365234,
+            810.9981079101562
+        ],
+        "nearest_geometry_bbox": [
+            75.15721130371094,
+            788.5775146484375,
+            169.1385498046875,
+            813.8360595703125
+        ],
+        "distance": 17.674947036585955,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "320",
+        "nominal": 320.0,
+        "nominal_text": "320",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 144,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1024.9896240234375,
+            700.1632690429688,
+            1047.1131591796875,
+            714.8510131835938
+        ],
+        "nearest_geometry_bbox": [
+            867.3684692382812,
+            697.3230590820312,
+            1167.9072265625,
+            717.684326171875
+        ],
+        "distance": 18.413544024087933,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "4",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 164,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            414.1650085449219,
+            798.787109375,
+            418.8365173339844,
+            808.0913696289062
+        ],
+        "nearest_geometry_bbox": [
+            470.3399963378906,
+            788.5800170898438,
+            470.3399963378906,
+            817.5599975585938
+        ],
+        "distance": 53.84049948999826,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 164,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            418.8365173339844,
+            798.787109375,
+            423.5080261230469,
+            808.0913696289062
+        ],
+        "nearest_geometry_bbox": [
+            470.3399963378906,
+            788.5800170898438,
+            470.3399963378906,
+            817.5599975585938
+        ],
+        "distance": 49.16911099119461,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 164,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            423.5080261230469,
+            798.787109375,
+            428.1795349121094,
+            808.0913696289062
+        ],
+        "nearest_geometry_bbox": [
+            470.3399963378906,
+            788.5800170898438,
+            470.3399963378906,
+            817.5599975585938
+        ],
+        "distance": 44.497747748946836,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "8",
+        "nominal": 8.0,
+        "nominal_text": "8",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 164,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            428.1795349121094,
+            798.787109375,
+            432.8510437011719,
+            808.0913696289062
+        ],
+        "nearest_geometry_bbox": [
+            470.3399963378906,
+            788.5800170898438,
+            470.3399963378906,
+            817.5599975585938
+        ],
+        "distance": 39.826418650513475,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "FALS.268.03",
+        "nominal": null,
+        "nominal_text": "FALS.268.03",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 160,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            305.3348693847656,
+            778.102294921875,
+            355.5021057128906,
+            787.8981323242188
+        ],
+        "nearest_geometry_bbox": [
+            199.27784729003906,
+            763.3079833984375,
+            464.1121826171875,
+            778.77197265625
+        ],
+        "distance": 12.028165185093345,
+        "glyph_count": 11
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1Kgs",
+        "nominal": 1.0,
+        "nominal_text": "1Kgs",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 156,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            724.0599975585938,
+            761.2422485351562,
+            745.39501953125,
+            771.05810546875
+        ],
+        "nearest_geometry_bbox": [
+            724.7056274414062,
+            758.4268798828125,
+            751.3319702148438,
+            773.8907470703125
+        ],
+        "distance": 3.2913016144074345,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "6",
+        "nominal": 6.0,
+        "nominal_text": "6",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 166,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            241.3191375732422,
+            808.0971069335938,
+            245.99066162109375,
+            817.4013671875
+        ],
+        "nearest_geometry_bbox": [
+            197.98770141601562,
+            775.26611328125,
+            358.320068359375,
+            790.7300415039062
+        ],
+        "distance": 45.555586788724305,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 166,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            311.3918151855469,
+            808.0971069335938,
+            316.0633239746094,
+            817.4013671875
+        ],
+        "nearest_geometry_bbox": [
+            210.45860290527344,
+            786.6475219726562,
+            458.3305969238281,
+            820.2315673828125
+        ],
+        "distance": 22.667079986372528,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "17",
+        "nominal": 17.0,
+        "nominal_text": "17",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 80,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            464.760009765625,
+            386.94781494140625,
+            478.47283935546875,
+            399.1895751953125
+        ],
+        "nearest_geometry_bbox": [
+            461.92840576171875,
+            386.8043212890625,
+            508.485595703125,
+            399.8155212402344
+        ],
+        "distance": 13.592716827820427,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "28",
+        "nominal": 28.0,
+        "nominal_text": "28",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 80,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            491.94000244140625,
+            386.94781494140625,
+            505.65283203125,
+            399.1895751953125
+        ],
+        "nearest_geometry_bbox": [
+            464.760009765625,
+            402.45001220703125,
+            519.8200073242188,
+            402.45001220703125
+        ],
+        "distance": 11.416762470855975,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "17",
+        "nominal": 17.0,
+        "nominal_text": "17",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 31,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            452.3399963378906,
+            143.39781188964844,
+            466.0528259277344,
+            155.6396026611328
+        ],
+        "nearest_geometry_bbox": [
+            470.29998779296875,
+            147.21002197265625,
+            475.260009765625,
+            152.1700439453125
+        ],
+        "distance": 13.584668043039615,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "19",
+        "nominal": 19.0,
+        "nominal_text": "19",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 31,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            479.5199890136719,
+            143.39781188964844,
+            493.2328186035156,
+            155.6396026611328
+        ],
+        "nearest_geometry_bbox": [
+            452.3399963378906,
+            158.9000244140625,
+            507.3999938964844,
+            158.9000244140625
+        ],
+        "distance": 11.416762470855975,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "29.05.2024",
+        "nominal": null,
+        "nominal_text": "29.05.2024",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 152,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            815.75,
+            737.822265625,
+            864.933349609375,
+            747.6181030273438
+        ],
+        "nearest_geometry_bbox": [
+            811.5614624023438,
+            734.988525390625,
+            869.119873046875,
+            750.4525146484375
+        ],
+        "distance": 0.001061555611018438,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0114624",
+        "nominal": 114624.0,
+        "nominal_text": "0114624",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 152,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            768.9849853515625,
+            738.2922973632812,
+            803.413330078125,
+            748.088134765625
+        ],
+        "nearest_geometry_bbox": [
+            744.374267578125,
+            735.4551391601562,
+            813.2620849609375,
+            750.9190673828125
+        ],
+        "distance": 7.38098210169402,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "00146020",
+        "nominal": 146020.0,
+        "nominal_text": "00146020",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 105,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1015.4050903320312,
+            507.5820007324219,
+            1043.405029296875,
+            517.2770385742188
+        ],
+        "nearest_geometry_bbox": [
+            911.8900146484375,
+            502.02001953125,
+            1137.1500244140625,
+            542.739990234375
+        ],
+        "distance": 11.084934590283313,
+        "glyph_count": 8
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "27",
+        "nominal": 27.0,
+        "nominal_text": "27",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 105,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1075.27685546875,
+            507.5820007324219,
+            1082.27685546875,
+            517.2770385742188
+        ],
+        "nearest_geometry_bbox": [
+            911.8900146484375,
+            502.02001953125,
+            1137.1500244140625,
+            542.739990234375
+        ],
+        "distance": 55.161729507432355,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 105,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1084.222900390625,
+            507.5820007324219,
+            1087.722900390625,
+            517.2770385742188
+        ],
+        "nearest_geometry_bbox": [
+            911.8900146484375,
+            502.02001953125,
+            1137.1500244140625,
+            542.739990234375
+        ],
+        "distance": 62.25326274356132,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2026",
+        "nominal": 2026.0,
+        "nominal_text": "2026",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 105,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NOMINAL_ONLY",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1089.6689453125,
+            507.5820007324219,
+            1103.6689453125,
+            517.2770385742188
+        ],
+        "nearest_geometry_bbox": [
+            1057.4417724609375,
+            567.5480346679688,
+            1107.3707275390625,
+            592.8065795898438
+        ],
+        "distance": 69.23284758995811,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 145,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            226.4911651611328,
+            706.6522827148438,
+            230.6717529296875,
+            716.4481201171875
+        ],
+        "nearest_geometry_bbox": [
+            208.3800048828125,
+            730.97998046875,
+            236.88999938964844,
+            749.4100341796875
+        ],
+        "distance": 29.255516664235472,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "6",
+        "nominal": 6.0,
+        "nominal_text": "6",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 145,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            230.6717529296875,
+            706.6522827148438,
+            234.8523406982422,
+            716.4481201171875
+        ],
+        "nearest_geometry_bbox": [
+            208.3800048828125,
+            730.97998046875,
+            236.88999938964844,
+            749.4100341796875
+        ],
+        "distance": 30.382263566486564,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "8",
+        "nominal": 8.0,
+        "nominal_text": "8",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 145,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            234.8523406982422,
+            706.6522827148438,
+            239.03292846679688,
+            716.4481201171875
+        ],
+        "nearest_geometry_bbox": [
+            240.45657348632812,
+            730.0367431640625,
+            252.63955688476562,
+            747.9493408203125
+        ],
+        "distance": 29.075312482564307,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 145,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            243.21351623535156,
+            706.6522827148438,
+            247.39410400390625,
+            716.4481201171875
+        ],
+        "nearest_geometry_bbox": [
+            240.45657348632812,
+            730.0367431640625,
+            252.63955688476562,
+            747.9493408203125
+        ],
+        "distance": 27.47103328159041,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 145,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            247.39410400390625,
+            706.6522827148438,
+            251.57469177246094,
+            716.4481201171875
+        ],
+        "nearest_geometry_bbox": [
+            240.45657348632812,
+            730.0367431640625,
+            252.63955688476562,
+            747.9493408203125
+        ],
+        "distance": 27.59948457181328,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "33",
+        "nominal": 33.0,
+        "nominal_text": "33",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 24,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            198.89999389648438,
+            112.38780212402344,
+            212.6128387451172,
+            124.62959289550781
+        ],
+        "nearest_geometry_bbox": [
+            196.06301879882812,
+            112.24371337890625,
+            215.4439697265625,
+            125.25494384765625
+        ],
+        "distance": 0.24064884459045127,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "29 ±1.0",
+        "nominal": 29.0,
+        "nominal_text": "29",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±1.0",
+                "tolerance_type": "bilateral",
+                "plus": 1.0,
+                "minus": -1.0
+            }
+        ],
+        "limits": {
+            "min": 28.0,
+            "max": 30.0
+        },
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 40,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            194.8800048828125,
+            188.9177703857422,
+            222.4385986328125,
+            201.15956115722656
+        ],
+        "nearest_geometry_bbox": [
+            192.0423126220703,
+            188.7791748046875,
+            225.27340698242188,
+            222.845947265625
+        ],
+        "distance": 10.77389536016603,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "62",
+        "nominal": 62.0,
+        "nominal_text": "62",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 76,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            159.27999877929688,
+            367.497802734375,
+            172.9928436279297,
+            379.73956298828125
+        ],
+        "nearest_geometry_bbox": [
+            156.44769287109375,
+            367.3618469238281,
+            175.8286590576172,
+            380.373046875
+        ],
+        "distance": 0.24877022697679094,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "31",
+        "nominal": 31.0,
+        "nominal_text": "31",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 72,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            152.1300048828125,
+            348.3577880859375,
+            165.8428497314453,
+            360.59954833984375
+        ],
+        "nearest_geometry_bbox": [
+            149.29611206054688,
+            348.2187805175781,
+            168.6770782470703,
+            361.22998046875
+        ],
+        "distance": 0.24571233760167638,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "radius_dimension",
+        "display_text": "R5",
+        "nominal": 5.0,
+        "nominal_text": "R5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 71,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            201.76112365722656,
+            338.5043029785156,
+            221.00035095214844,
+            356.77691650390625
+        ],
+        "nearest_geometry_bbox": [
+            188.00999450683594,
+            344.6000061035156,
+            219.8000030517578,
+            363.6200256347656
+        ],
+        "distance": 9.886348271637196,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "11 ±0.25",
+        "nominal": 11.0,
+        "nominal_text": "11",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±0.25",
+                "tolerance_type": "bilateral",
+                "plus": 0.25,
+                "minus": -0.25
+            }
+        ],
+        "limits": {
+            "min": 10.75,
+            "max": 11.25
+        },
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 25,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            92.7699966430664,
+            118.68228149414062,
+            127.51721954345703,
+            128.4781036376953
+        ],
+        "nearest_geometry_bbox": [
+            85.77999877929688,
+            132.21002197265625,
+            141.6999969482422,
+            132.21002197265625
+        ],
+        "distance": 9.34922322820554,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "SRC_dimension",
+        "display_text": "11 X 17",
+        "nominal": null,
+        "nominal_text": "11 X 17",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 66,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "IMPLICIT_X_BETWEEN_NUMBERS",
+        "operator": "X",
+        "values": [
+            11,
+            17
+        ],
+        "text_bbox": [
+            188.17999267578125,
+            316.67779541015625,
+            218.912109375,
+            328.9195556640625
+        ],
+        "nearest_geometry_bbox": [
+            168.89999389648438,
+            316.1099853515625,
+            255.8000030517578,
+            328.9200439453125
+        ],
+        "distance": 8.808516003264673,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "02",
+        "nominal": 2.0,
+        "nominal_text": "02",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 27,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            723.9400024414062,
+            125.8591079711914,
+            741.1571655273438,
+            143.0048065185547
+        ],
+        "nearest_geometry_bbox": [
+            720.4000244140625,
+            122.2900390625,
+            744.7000122070312,
+            146.58001708984375
+        ],
+        "distance": 0.003389291435269033,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "01",
+        "nominal": 1.0,
+        "nominal_text": "01",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 30,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            795.3800048828125,
+            137.76913452148438,
+            812.59716796875,
+            154.9148406982422
+        ],
+        "nearest_geometry_bbox": [
+            791.8400268554688,
+            134.20001220703125,
+            816.1300048828125,
+            158.489990234375
+        ],
+        "distance": 0.0046723361413681525,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "03",
+        "nominal": 3.0,
+        "nominal_text": "03",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 47,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            791.97998046875,
+            219.40908813476562,
+            809.1971435546875,
+            236.55479431152344
+        ],
+        "nearest_geometry_bbox": [
+            785.6013793945312,
+            213.0,
+            815.561767578125,
+            242.96038818359375
+        ],
+        "distance": 0.007203607088214449,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "radius_dimension",
+        "display_text": "R10",
+        "nominal": 10.0,
+        "nominal_text": "R10",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 35,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            417.239990234375,
+            163.4077606201172,
+            439.9328308105469,
+            175.64955139160156
+        ],
+        "nearest_geometry_bbox": [
+            414.4062194824219,
+            163.267333984375,
+            442.7690124511719,
+            176.278564453125
+        ],
+        "distance": 0.2442961869544248,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "72.5 ±1.0",
+        "nominal": 72.5,
+        "nominal_text": "72.5",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±1.0",
+                "tolerance_type": "bilateral",
+                "plus": 1.0,
+                "minus": -1.0
+            }
+        ],
+        "limits": {
+            "min": 71.5,
+            "max": 73.5
+        },
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 69,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            302.3500061035156,
+            330.64776611328125,
+            345.0386047363281,
+            342.8895568847656
+        ],
+        "nearest_geometry_bbox": [
+            299.5174865722656,
+            330.511474609375,
+            347.87762451171875,
+            343.52264404296875
+        ],
+        "distance": 0.2484190890924789,
+        "glyph_count": 6
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "55",
+        "nominal": 55.0,
+        "nominal_text": "55",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 61,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            561.2100219726562,
+            292.20782470703125,
+            574.9228515625,
+            304.4495849609375
+        ],
+        "nearest_geometry_bbox": [
+            558.3787231445312,
+            292.2720947265625,
+            577.7597045898438,
+            305.07904052734375
+        ],
+        "distance": 0.3468739099850583,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "14.5",
+        "nominal": 14.5,
+        "nominal_text": "14.5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 93,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            111.04000091552734,
+            451.2523193359375,
+            134.10336303710938,
+            461.04815673828125
+        ],
+        "nearest_geometry_bbox": [
+            108.20075988769531,
+            450.5782775878906,
+            136.94259643554688,
+            462.1210632324219
+        ],
+        "distance": 0.19943237308335834,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "33 ±0.25",
+        "nominal": 33.0,
+        "nominal_text": "33",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±0.25",
+                "tolerance_type": "bilateral",
+                "plus": 0.25,
+                "minus": -0.25
+            }
+        ],
+        "limits": {
+            "min": 32.75,
+            "max": 33.25
+        },
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 91,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            207.24000549316406,
+            439.9123229980469,
+            241.98721313476562,
+            449.7081604003906
+        ],
+        "nearest_geometry_bbox": [
+            204.4053955078125,
+            439.23968505859375,
+            244.83248901367188,
+            450.782470703125
+        ],
+        "distance": 0.2009069739389753,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "SRC_dimension",
+        "display_text": "20 X 45",
+        "nominal": null,
+        "nominal_text": "20 X 45",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "horizontal",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 97,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "IMPLICIT_X_BETWEEN_NUMBERS",
+        "operator": "X",
+        "values": [
+            20,
+            45
+        ],
+        "text_bbox": [
+            215.02000427246094,
+            470.4623107910156,
+            239.61167907714844,
+            480.2581481933594
+        ],
+        "nearest_geometry_bbox": [
+            212.1830291748047,
+            467.62701416015625,
+            243.57485961914062,
+            483.09100341796875
+        ],
+        "distance": 0.5631040452963342,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            985.2770385742188,
+            492.5820007324219,
+            988.7770385742188,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 39.25935044052969,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            990.7230224609375,
+            492.5820007324219,
+            994.2230224609375,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 35.312064499366514,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            994.2230224609375,
+            492.5820007324219,
+            997.7230224609375,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 33.00118653596624,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            999.6690063476562,
+            492.5820007324219,
+            1003.1690063476562,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 29.869097461633707,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1003.1690063476562,
+            492.5820007324219,
+            1006.6690063476562,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 28.229794259856433,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1006.6690063476562,
+            492.5820007324219,
+            1010.1690063476562,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 26.94771947187875,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 102,
+        "reading_direction": "left_to_right",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1010.1690063476562,
+            492.5820007324219,
+            1013.6690063476562,
+            502.2770080566406
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            471.8100280761719,
+            1165.949951171875,
+            471.8100280761719
+        ],
+        "distance": 26.075618602754627,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "654321N",
+        "nominal": 654321.0,
+        "nominal_text": "654321N",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 38,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            79.37000274658203,
+            598.1077880859375,
+            85.51642608642578,
+            683.8095703125
+        ],
+        "nearest_geometry_bbox": [
+            51.942020416259766,
+            514.551513671875,
+            69.85457611083984,
+            735.3719482421875
+        ],
+        "distance": 26.834413820708814,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "15 ±0.25",
+        "nominal": 15.0,
+        "nominal_text": "15",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±0.25",
+                "tolerance_type": "bilateral",
+                "plus": 0.25,
+                "minus": -0.25
+            }
+        ],
+        "limits": {
+            "min": 14.75,
+            "max": 15.25
+        },
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 53,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            109.03228759765625,
+            529.6983642578125,
+            118.828125,
+            573.1800537109375
+        ],
+        "nearest_geometry_bbox": [
+            108.35759735107422,
+            526.8533325195312,
+            119.90037536621094,
+            576.0177001953125
+        ],
+        "distance": 0.19881435479776732,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "321W",
+        "nominal": 321.0,
+        "nominal_text": "321W",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 244,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            521.5700073242188,
+            566.9277954101562,
+            527.7164306640625,
+            615.8995361328125
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 72.6829224050917,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 244,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            509.69970703125,
+            541.497802734375,
+            539.1610107421875,
+            575.9445190429688
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 105.19447500729571,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 247,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            527.9600219726562,
+            625.0377807617188,
+            534.1064453125,
+            637.279541015625
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 35.76602278499557,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 247,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            527.9600219726562,
+            645.017822265625,
+            534.1064453125,
+            657.2595825195312
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 19.576780899709163,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 247,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            527.9600219726562,
+            664.98779296875,
+            534.1064453125,
+            677.2295532226562
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 16.89806171446699,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 275,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            576.6103515625,
+            494.18231201171875,
+            606.0716552734375,
+            528.6290283203125
+        ],
+        "nearest_geometry_bbox": [
+            447.8699951171875,
+            416.69000244140625,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 95.61401567194773,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "60",
+        "nominal": 60.0,
+        "nominal_text": "60",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 287,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            610.2977905273438,
+            132.2271728515625,
+            622.53955078125,
+            145.94000244140625
+        ],
+        "nearest_geometry_bbox": [
+            610.1608276367188,
+            129.3941650390625,
+            623.1719970703125,
+            148.77520751953125
+        ],
+        "distance": 0.24774413519970617,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 318,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            668.44384765625,
+            429.2425231933594,
+            697.9051513671875,
+            463.68927001953125
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 51.54673340794428,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 295,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            620.8226928710938,
+            462.91766357421875,
+            650.2839965820312,
+            497.3644104003906
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 81.86148319838385,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "6",
+        "nominal": 6.0,
+        "nominal_text": "6",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 310,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            651.440673828125,
+            441.2662658691406,
+            680.9019775390625,
+            475.7130126953125
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 57.62057646608536,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "8",
+        "nominal": 8.0,
+        "nominal_text": "8",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 324,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            693.6698608398438,
+            591.4177856445312,
+            699.8162841796875,
+            603.6595458984375
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            863.9099731445312,
+            623.6199951171875
+        ],
+        "distance": 26.96158354722885,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 278,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            595.1021118164062,
+            625.0377807617188,
+            601.24853515625,
+            637.279541015625
+        ],
+        "nearest_geometry_bbox": [
+            619.4500122070312,
+            623.6199951171875,
+            619.4500122070312,
+            703.52001953125
+        ],
+        "distance": 38.76993368485236,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 278,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            595.1021118164062,
+            645.017822265625,
+            601.24853515625,
+            657.2595825195312
+        ],
+        "nearest_geometry_bbox": [
+            619.4500122070312,
+            623.6199951171875,
+            619.4500122070312,
+            703.52001953125
+        ],
+        "distance": 24.64040832588302,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 278,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            595.1021118164062,
+            664.98779296875,
+            601.24853515625,
+            677.2295532226562
+        ],
+        "nearest_geometry_bbox": [
+            619.4500122070312,
+            623.6199951171875,
+            619.4500122070312,
+            703.52001953125
+        ],
+        "distance": 22.570863115462885,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 389,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            833.4099731445312,
+            625.0377807617188,
+            839.556396484375,
+            637.279541015625
+        ],
+        "nearest_geometry_bbox": [
+            809.0599975585938,
+            623.6199951171875,
+            809.0599975585938,
+            703.52001953125
+        ],
+        "distance": 42.45617242563165,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 389,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            833.4099731445312,
+            645.017822265625,
+            839.556396484375,
+            657.2595825195312
+        ],
+        "nearest_geometry_bbox": [
+            809.0599975585938,
+            623.6199951171875,
+            809.0599975585938,
+            703.52001953125
+        ],
+        "distance": 30.109276669713616,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 389,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            833.4099731445312,
+            664.98779296875,
+            839.556396484375,
+            677.2295532226562
+        ],
+        "nearest_geometry_bbox": [
+            809.0599975585938,
+            623.6199951171875,
+            809.0599975585938,
+            703.52001953125
+        ],
+        "distance": 28.440511262705495,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "21",
+        "nominal": 21.0,
+        "nominal_text": "21",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 406,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            870.4299926757812,
+            67.73777770996094,
+            876.576416015625,
+            92.22956848144531
+        ],
+        "nearest_geometry_bbox": [
+            867.5999755859375,
+            63.8699951171875,
+            867.5999755859375,
+            96.09002685546875
+        ],
+        "distance": 5.903229895673137,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "7",
+        "nominal": 7.0,
+        "nominal_text": "7",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 463,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            993.3584594726562,
+            67.73777770996094,
+            999.5048828125,
+            79.97956848144531
+        ],
+        "nearest_geometry_bbox": [
+            864.7616577148438,
+            61.0400390625,
+            1168.6795654296875,
+            98.9278564453125
+        ],
+        "distance": 21.19339740102642,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 469,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1005.4299926757812,
+            796.09326171875,
+            1012.8045043945312,
+            810.781005859375
+        ],
+        "nearest_geometry_bbox": [
+            1002.5941772460938,
+            793.254638671875,
+            1015.6400146484375,
+            813.615966796875
+        ],
+        "distance": 0.0018374015165393517,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "6",
+        "nominal": 6.0,
+        "nominal_text": "6",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 446,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            952.8027954101562,
+            761.945556640625,
+            965.0956420898438,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            948.7000122070312,
+            757.0400390625,
+            948.7000122070312,
+            789.6400146484375
+        ],
+        "distance": 10.285016482202554,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 468,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1000.0684204101562,
+            761.945556640625,
+            1012.3612670898438,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            995.469970703125,
+            757.0400390625,
+            995.469970703125,
+            789.6400146484375
+        ],
+        "distance": 10.779036416684267,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 479,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1023.7012329101562,
+            761.945556640625,
+            1035.9940185546875,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            926.3362426757812,
+            759.113037109375,
+            1113.1165771484375,
+            789.289306640625
+        ],
+        "distance": 10.12121647183791,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 490,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1047.3341064453125,
+            761.945556640625,
+            1059.626953125,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            1042.239990234375,
+            757.0400390625,
+            1042.239990234375,
+            789.6400146484375
+        ],
+        "distance": 11.273200906194402,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 501,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1070.9669189453125,
+            761.945556640625,
+            1083.259765625,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            1065.6300048828125,
+            757.0400390625,
+            1065.6300048828125,
+            789.6400146484375
+        ],
+        "distance": 11.515310120652924,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "4",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 512,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1094.5997314453125,
+            761.945556640625,
+            1106.892578125,
+            786.4495239257812
+        ],
+        "nearest_geometry_bbox": [
+            1112.4000244140625,
+            757.0400390625,
+            1112.4000244140625,
+            789.6400146484375
+        ],
+        "distance": 11.685375758027135,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 500,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1071.3900146484375,
+            795.7332763671875,
+            1078.7645263671875,
+            810.4210205078125
+        ],
+        "nearest_geometry_bbox": [
+            1068.5545654296875,
+            792.898681640625,
+            1081.600341796875,
+            813.2599487304688
+        ],
+        "distance": 0.0021744711337064893,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "10",
+        "nominal": 10.0,
+        "nominal_text": "10",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 277,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            589.8577880859375,
+            363.5771789550781,
+            602.0995483398438,
+            377.2900085449219
+        ],
+        "nearest_geometry_bbox": [
+            605.3599853515625,
+            359.8000183105469,
+            605.3599853515625,
+            378.25
+        ],
+        "distance": 9.486475732158896,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "6",
+        "nominal": 6.0,
+        "nominal_text": "6",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 237,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            494.39068603515625,
+            552.323486328125,
+            523.8519897460938,
+            586.7702026367188
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 94.26791988468628,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 533,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1140.622802734375,
+            761.95556640625,
+            1152.9156494140625,
+            786.4595336914062
+        ],
+        "nearest_geometry_bbox": [
+            1118.6175537109375,
+            759.119873046875,
+            1162.63623046875,
+            789.2962036132812
+        ],
+        "distance": 6.142334003782817,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 533,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            1140.8828125,
+            793.6055908203125,
+            1153.1756591796875,
+            818.089111328125
+        ],
+        "nearest_geometry_bbox": [
+            1125.7568359375,
+            790.7678833007812,
+            1156.014892578125,
+            820.923828125
+        ],
+        "distance": 6.143371764024593,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 232,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            484.1846923828125,
+            559.5405883789062,
+            513.64599609375,
+            593.9873046875
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 88.45399709292197,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 2,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            0.0,
+            73.54714965820312,
+            8.033089637756348,
+            93.54646301269531
+        ],
+        "nearest_geometry_bbox": [
+            -0.028346456587314606,
+            70.71307373046875,
+            10.866300582885742,
+            96.378173828125
+        ],
+        "distance": 1.4024327428472851,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 2,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            0.0,
+            240.78720092773438,
+            8.033089637756348,
+            260.7865295410156
+        ],
+        "nearest_geometry_bbox": [
+            -0.028346456587314606,
+            237.9571533203125,
+            10.866300582885742,
+            263.62225341796875
+        ],
+        "distance": 1.4024351160677822,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 2,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            0.0,
+            408.03717041015625,
+            8.033089637756348,
+            428.0364990234375
+        ],
+        "nearest_geometry_bbox": [
+            -0.028346456587314606,
+            405.2013244628906,
+            10.866300582885742,
+            430.86639404296875
+        ],
+        "distance": 1.4024354007070454,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "4",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 2,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            0.0,
+            575.2771606445312,
+            8.033089637756348,
+            595.2764892578125
+        ],
+        "nearest_geometry_bbox": [
+            -0.028346456587314606,
+            572.4454345703125,
+            10.866300582885742,
+            598.1104736328125
+        ],
+        "distance": 1.4024326988314664,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "99 ±0.25",
+        "nominal": 99.0,
+        "nominal_text": "99",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±0.25",
+                "tolerance_type": "bilateral",
+                "plus": 0.25,
+                "minus": -0.25
+            }
+        ],
+        "limits": {
+            "min": 98.75,
+            "max": 99.25
+        },
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 57,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            117.04776763916016,
+            267.7984924316406,
+            129.28955078125,
+            311.239990234375
+        ],
+        "nearest_geometry_bbox": [
+            116.90374755859375,
+            264.95892333984375,
+            129.91493225097656,
+            314.075439453125
+        ],
+        "distance": 0.240689509704992,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "175.5 ±1.0",
+        "nominal": 175.5,
+        "nominal_text": "175.5",
+        "modifiers": [
+            {
+                "type": "tolerance",
+                "value": "±1.0",
+                "tolerance_type": "bilateral",
+                "plus": 1.0,
+                "minus": -1.0
+            }
+        ],
+        "limits": {
+            "min": 174.5,
+            "max": 176.5
+        },
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 57,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "NUMBER_OPERATOR_NUMBER",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            116.97776794433594,
+            195.16139221191406,
+            129.2195587158203,
+            245.4200439453125
+        ],
+        "nearest_geometry_bbox": [
+            116.83358764648438,
+            192.3306884765625,
+            129.8447723388672,
+            248.25537109375
+        ],
+        "distance": 0.24052777173178075,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "340",
+        "nominal": 340.0,
+        "nominal_text": "340",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 46,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            93.87776947021484,
+            236.1507568359375,
+            106.11956024169922,
+            257.42999267578125
+        ],
+        "nearest_geometry_bbox": [
+            93.73392486572266,
+            233.31707763671875,
+            106.7451171875,
+            260.2625732421875
+        ],
+        "distance": 0.24085679706158586,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "45.5",
+        "nominal": 45.5,
+        "nominal_text": "45.5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 58,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            119.38777160644531,
+            362.90435791015625,
+            131.6295623779297,
+            391.75
+        ],
+        "nearest_geometry_bbox": [
+            119.44993591308594,
+            360.07916259765625,
+            132.25692749023438,
+            394.58917236328125
+        ],
+        "distance": 0.3448355323699988,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "entity_type": "thickness_dimension",
+        "display_text": "4 THK",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 157,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            326.9599914550781,
+            118.05778503417969,
+            348.2392272949219,
+            151.55958557128906
+        ],
+        "nearest_geometry_bbox": [
+            324.12103271484375,
+            118.11724853515625,
+            351.0664978027344,
+            151.97979736328125
+        ],
+        "distance": 0.23990883761431336,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 178,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            379.9183349609375,
+            129.43228149414062,
+            384.836669921875,
+            139.2281036376953
+        ],
+        "nearest_geometry_bbox": [
+            371.8900146484375,
+            139.22003173828125,
+            416.7900085449219,
+            139.22003173828125
+        ],
+        "distance": 12.923318166074038,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 145,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            309.058349609375,
+            226.79232788085938,
+            313.9766845703125,
+            236.58815002441406
+        ],
+        "nearest_geometry_bbox": [
+            283.47332763671875,
+            221.99993896484375,
+            348.7607421875,
+            252.12481689453125
+        ],
+        "distance": 7.072159598459818,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "10",
+        "nominal": 10.0,
+        "nominal_text": "10",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 259,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            550.6978149414062,
+            131.67718505859375,
+            562.9395751953125,
+            145.3900146484375
+        ],
+        "nearest_geometry_bbox": [
+            566.2000122070312,
+            127.9000244140625,
+            566.2000122070312,
+            147.75
+        ],
+        "distance": 9.408039525272464,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "thickness_dimension",
+        "display_text": "4 THK",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 313,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            661.22998046875,
+            115.40325927734375,
+            686.7535400390625,
+            152.76100158691406
+        ],
+        "nearest_geometry_bbox": [
+            658.3910522460938,
+            116.0426025390625,
+            689.591796875,
+            152.70916748046875
+        ],
+        "distance": 0.2937547694464867,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "90",
+        "nominal": 90.0,
+        "nominal_text": "90",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "vertical",
+        "dimension_axis": "vertical",
+        "axis_bucket": 240,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            511.1177978515625,
+            352.06719970703125,
+            523.3595581054688,
+            365.780029296875
+        ],
+        "nearest_geometry_bbox": [
+            510.9790344238281,
+            349.23089599609375,
+            523.990234375,
+            368.61187744140625
+        ],
+        "distance": 0.2459665099137878,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "entity_type": "thickness_dimension",
+        "display_text": "4 THK",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 316,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            669.9500122070312,
+            312.0078125,
+            691.229248046875,
+            345.5095520019531
+        ],
+        "nearest_geometry_bbox": [
+            667.1171264648438,
+            312.0677490234375,
+            694.0626220703125,
+            345.9303283691406
+        ],
+        "distance": 0.24035656930465948,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "1",
+        "nominal": 1.0,
+        "nominal_text": "1",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 213,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            443.3607177734375,
+            588.4090576171875,
+            472.822021484375,
+            622.8557739257812
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 81.85203374033244,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 218,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            453.56671142578125,
+            581.1919555664062,
+            483.02801513671875,
+            615.638671875
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 80.6975508708971,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 225,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            468.875732421875,
+            570.3662719726562,
+            498.3370056152344,
+            604.81298828125
+        ],
+        "nearest_geometry_bbox": [
+            515.9099731445312,
+            623.6199951171875,
+            515.9099731445312,
+            703.52001953125
+        ],
+        "distance": 82.56234346581117,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 249,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            519.9057006835938,
+            534.2806396484375,
+            549.3670043945312,
+            568.7273559570312
+        ],
+        "nearest_geometry_bbox": [
+            546.1599731445312,
+            623.6199951171875,
+            546.1599731445312,
+            703.52001953125
+        ],
+        "distance": 112.6569319745936,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "4",
+        "nominal": 4.0,
+        "nominal_text": "4",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 253,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            530.1116943359375,
+            527.0634765625,
+            559.572998046875,
+            561.5101928710938
+        ],
+        "nearest_geometry_bbox": [
+            546.1599731445312,
+            623.6199951171875,
+            546.1599731445312,
+            703.52001953125
+        ],
+        "distance": 119.29044977733801,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 270,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            566.4043579101562,
+            501.3994140625,
+            595.8656616210938,
+            535.8461303710938
+        ],
+        "nearest_geometry_bbox": [
+            447.8699951171875,
+            416.69000244140625,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 101.97316608415667,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 283,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            593.613525390625,
+            482.1585388183594,
+            623.0748291015625,
+            516.6052856445312
+        ],
+        "nearest_geometry_bbox": [
+            447.8699951171875,
+            416.69000244140625,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 87.99266903093417,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 288,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            603.8195190429688,
+            474.94140625,
+            633.2808227539062,
+            509.3881530761719
+        ],
+        "nearest_geometry_bbox": [
+            447.8699951171875,
+            416.69000244140625,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 85.5531312668381,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 300,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            631.0286865234375,
+            455.7005310058594,
+            660.489990234375,
+            490.14727783203125
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 72.53789777653432,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 305,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            641.2346801757812,
+            448.4833984375,
+            670.6959838867188,
+            482.9301452636719
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 64.30155063542801,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "9",
+        "nominal": 9.0,
+        "nominal_text": "9",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 322,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            678.6498413085938,
+            422.025390625,
+            708.1111450195312,
+            456.4721374511719
+        ],
+        "nearest_geometry_bbox": [
+            656.1900024414062,
+            401.44000244140625,
+            659.969970703125,
+            401.44000244140625
+        ],
+        "distance": 51.72647503080077,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "5",
+        "nominal": 5.0,
+        "nominal_text": "5",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 329,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            693.9588623046875,
+            411.19970703125,
+            723.420166015625,
+            445.6464538574219
+        ],
+        "nearest_geometry_bbox": [
+            708.6599731445312,
+            351.0600280761719,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 44.548074980265284,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "7",
+        "nominal": 7.0,
+        "nominal_text": "7",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 334,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            704.1648559570312,
+            403.9825744628906,
+            733.6261596679688,
+            438.4293212890625
+        ],
+        "nearest_geometry_bbox": [
+            708.6599731445312,
+            351.0600280761719,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 38.70871607284571,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "3",
+        "nominal": 3.0,
+        "nominal_text": "3",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 341,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            719.473876953125,
+            393.1568908691406,
+            748.9351806640625,
+            427.6036376953125
+        ],
+        "nearest_geometry_bbox": [
+            708.6599731445312,
+            351.0600280761719,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 36.811038424212136,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "0",
+        "nominal": 0.0,
+        "nominal_text": "0",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_vertical_fragment",
+        "dimension_axis": "vertical",
+        "axis_bucket": 346,
+        "reading_direction": "bottom_to_top",
+        "grammar_rule": "CHAIN_STRING",
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            729.6798706054688,
+            385.93975830078125,
+            759.1411743164062,
+            420.3865051269531
+        ],
+        "nearest_geometry_bbox": [
+            708.6599731445312,
+            351.0600280761719,
+            708.6599731445312,
+            416.69000244140625
+        ],
+        "distance": 40.62183172641838,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "entity_type": "linear_dimension",
+        "display_text": "2",
+        "nominal": 2.0,
+        "nominal_text": "2",
+        "modifiers": [],
+        "limits": null,
+        "orientation": "unresolved_horizontal_fragment",
+        "dimension_axis": "horizontal",
+        "axis_bucket": 66,
+        "reading_direction": "left_to_right",
+        "grammar_rule": null,
+        "operator": null,
+        "values": null,
+        "text_bbox": [
+            225.05853271484375,
+            316.67779541015625,
+            231.2049560546875,
+            328.9195556640625
+        ],
+        "nearest_geometry_bbox": [
+            185.34402465820312,
+            313.838134765625,
+            258.6322937011719,
+            331.7507629394531
+        ],
+        "distance": 6.143586659022341,
+        "glyph_count": 1
+    }
+]

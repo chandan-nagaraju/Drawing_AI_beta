@@ -1,0 +1,6 @@
+uploads/
+__pycache__/
+*.pyc
+.venv/
+viewer/node_modules/
+viewer/dist/

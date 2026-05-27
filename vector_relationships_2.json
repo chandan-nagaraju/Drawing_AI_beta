@@ -1,0 +1,1642 @@
+[
+    {
+        "page": 1,
+        "text": "ILLOFESCRIPTZBRACKSTIFFNESTIFFNEIONTOBASPERIS276.02",
+        "classification": "unknown",
+        "orientation": "horizontal",
+        "text_bbox": [
+            87.69821166992188,
+            444.4691162109375,
+            186.63632202148438,
+            477.02227783203125
+        ],
+        "nearest_geometry_bbox": [
+            99.60000610351562,
+            363.239990234375,
+            155.75999450683594,
+            608.1600341796875
+        ],
+        "distance": 26.696930025578315,
+        "glyph_count": 51
+    },
+    {
+        "page": 1,
+        "text": "4.REFER3DMODELFORUNSPECIFIEDDIMENSIONS",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            130.8411102294922,
+            56.03929901123047,
+            138.8763427734375,
+            241.0513153076172
+        ],
+        "nearest_geometry_bbox": [
+            111.36000061035156,
+            54.12000274658203,
+            175.6800079345703,
+            244.0800018310547
+        ],
+        "distance": 8.679021794702734,
+        "glyph_count": 38
+    },
+    {
+        "page": 1,
+        "text": "2.TOLERANCEONOVERALLDIMENSIONSTOBE1mm",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            148.12049865722656,
+            55.919769287109375,
+            156.15573120117188,
+            243.86219787597656
+        ],
+        "nearest_geometry_bbox": [
+            111.36000061035156,
+            54.12000274658203,
+            175.6800079345703,
+            244.0800018310547
+        ],
+        "distance": 8.654333174614104,
+        "glyph_count": 37
+    },
+    {
+        "page": 1,
+        "text": "MATERIA21.05.2024JEETENDRDATEDRAW",
+        "classification": "unknown",
+        "orientation": "horizontal",
+        "text_bbox": [
+            144.04234313964844,
+            612.1212158203125,
+            193.2571563720703,
+            647.35400390625
+        ],
+        "nearest_geometry_bbox": [
+            167.63999938964844,
+            609.8399658203125,
+            178.55999755859375,
+            655.199951171875
+        ],
+        "distance": 5.248445252539428,
+        "glyph_count": 33
+    },
+    {
+        "page": 1,
+        "text": "5.WELDINGTOBEDONEWITHUNIFORMBEAD",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            122.1996841430664,
+            55.800235748291016,
+            130.2349090576172,
+            219.97537231445312
+        ],
+        "nearest_geometry_bbox": [
+            111.36000061035156,
+            54.12000274658203,
+            175.6800079345703,
+            244.0800018310547
+        ],
+        "distance": 20.61788259135967,
+        "glyph_count": 32
+    },
+    {
+        "page": 1,
+        "text": "6.NOCRACKES/FORMINGMARKSALLOWED",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            113.56175231933594,
+            55.800235748291016,
+            121.59698486328125,
+            210.75933837890625
+        ],
+        "nearest_geometry_bbox": [
+            88.44000244140625,
+            101.75999450683594,
+            99.36000061035156,
+            179.27999877929688
+        ],
+        "distance": 24.761523769226585,
+        "glyph_count": 31
+    },
+    {
+        "page": 1,
+        "text": "1.GENERALTOLERANCETOBE0.5mm",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            156.64239501953125,
+            55.31859588623047,
+            164.67762756347656,
+            189.83670043945312
+        ],
+        "nearest_geometry_bbox": [
+            175.79998779296875,
+            89.04000091552734,
+            191.8800048828125,
+            171.72000122070312
+        ],
+        "distance": 24.457890702371305,
+        "glyph_count": 27
+    },
+    {
+        "page": 1,
+        "text": "3.02.20001314CA-DAETRE-DIN",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            528.1171875,
+            752.28076171875,
+            568.7738037109375,
+            773.7866821289062
+        ],
+        "nearest_geometry_bbox": [
+            549.47998046875,
+            754.199951171875,
+            561.3599853515625,
+            776.3999633789062
+        ],
+        "distance": 7.3334368362943385,
+        "glyph_count": 26
+    },
+    {
+        "page": 1,
+        "text": "3.SHARPCORNERTOBEREMOVED",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            139.48255920410156,
+            55.800235748291016,
+            147.51779174804688,
+            182.3191680908203
+        ],
+        "nearest_geometry_bbox": [
+            111.36000061035156,
+            54.12000274658203,
+            175.6800079345703,
+            244.0800018310547
+        ],
+        "distance": 30.04030691349026,
+        "glyph_count": 24
+    },
+    {
+        "page": 1,
+        "text": "CLASSCASPERALS.268.03",
+        "classification": "unknown",
+        "orientation": "vertical",
+        "text_bbox": [
+            90.5865707397461,
+            103.44314575195312,
+            97.0148696899414,
+            182.8522186279297
+        ],
+        "nearest_geometry_bbox": [
+            88.44000244140625,
+            101.75999450683594,
+            99.36000061035156,
+            179.27999877929688
+        ],
+        "distance": 2.6295604408297266,
+        "glyph_count": 21
+    },
+    {
+        "page": 1,
+        "text": "05.2024NDRASATEHECKE",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            155.9870147705078,
+            666.2388305664062,
+            192.41688537597656,
+            687.2406616210938
+        ],
+        "nearest_geometry_bbox": [
+            168.0,
+            652.5599975585938,
+            178.9199981689453,
+            698.4000244140625
+        ],
+        "distance": 1.4619930952666254,
+        "glyph_count": 20
+    },
+    {
+        "page": 1,
+        "text": "1-DIM.62&31WAS70&33",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            538.4830932617188,
+            612.0026245117188,
+            546.5183715820312,
+            707.9500122070312
+        ],
+        "nearest_geometry_bbox": [
+            552.1199951171875,
+            637.3200073242188,
+            566.52001953125,
+            698.4000244140625
+        ],
+        "distance": 18.575271052291406,
+        "glyph_count": 19
+    },
+    {
+        "page": 1,
+        "text": "2-DETAILVIEWAADDED",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            529.8411865234375,
+            612.6046142578125,
+            537.87646484375,
+            700.9634399414062
+        ],
+        "nearest_geometry_bbox": [
+            552.1199951171875,
+            637.3200073242188,
+            566.52001953125,
+            698.4000244140625
+        ],
+        "distance": 27.765973740527848,
+        "glyph_count": 18
+    },
+    {
+        "page": 1,
+        "text": "11X17(2nos)",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            364.0018615722656,
+            131.8822021484375,
+            372.0370788574219,
+            173.15992736816406
+        ],
+        "nearest_geometry_bbox": [
+            363.1199951171875,
+            119.04000091552734,
+            372.1199951171875,
+            180.24000549316406
+        ],
+        "distance": 2.9086244225278586,
+        "glyph_count": 11
+    },
+    {
+        "page": 1,
+        "text": "29.05.2024",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            68.74703979492188,
+            574.0909423828125,
+            75.17533874511719,
+            603.09912109375
+        ],
+        "nearest_geometry_bbox": [
+            66.47999572753906,
+            571.3200073242188,
+            77.39999389648438,
+            611.8800048828125
+        ],
+        "distance": 3.0050491078792674,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "text": "21.05.2024",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            155.9870147705078,
+            746.4199829101562,
+            162.41531372070312,
+            775.4281616210938
+        ],
+        "nearest_geometry_bbox": [
+            153.72000122070312,
+            742.3200073242188,
+            164.63999938964844,
+            785.52001953125
+        ],
+        "distance": 2.9960159143762546,
+        "glyph_count": 10
+    },
+    {
+        "page": 1,
+        "text": "21.HADC",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            155.9870147705078,
+            658.1170043945312,
+            192.41688537597656,
+            667.17236328125
+        ],
+        "nearest_geometry_bbox": [
+            168.0,
+            652.5599975585938,
+            178.9199981689453,
+            698.4000244140625
+        ],
+        "distance": 12.856753644569565,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "text": "15±0.25",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            190.6800079345703,
+            77.22720336914062,
+            213.21395874023438,
+            83.65536499023438
+        ],
+        "nearest_geometry_bbox": [
+            189.24000549316406,
+            76.44000244140625,
+            223.9199981689453,
+            84.60000610351562
+        ],
+        "distance": 4.633687215979396,
+        "glyph_count": 7
+    },
+    {
+        "page": 1,
+        "text": "±0.25",
+        "classification": "tolerance",
+        "orientation": "horizontal",
+        "text_bbox": [
+            388.08001708984375,
+            84.1187973022461,
+            400.6993103027344,
+            89.74343872070312
+        ],
+        "nearest_geometry_bbox": [
+            373.55999755859375,
+            82.55999755859375,
+            408.1199951171875,
+            91.68000030517578
+        ],
+        "distance": 3.5546890662017585,
+        "glyph_count": 5
+    },
+    {
+        "page": 1,
+        "text": "175.5",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            421.0813903808594,
+            82.8831787109375,
+            439.1246337890625,
+            90.91841125488281
+        ],
+        "nearest_geometry_bbox": [
+            419.8800048828125,
+            82.44000244140625,
+            459.239990234375,
+            91.55999755859375
+        ],
+        "distance": 9.457505796134509,
+        "glyph_count": 5
+    },
+    {
+        "page": 1,
+        "text": "±0.25",
+        "classification": "tolerance",
+        "orientation": "vertical",
+        "text_bbox": [
+            505.3112487792969,
+            75.48198699951172,
+            509.8646545410156,
+            85.66593933105469
+        ],
+        "nearest_geometry_bbox": [
+            489.5999755859375,
+            58.560001373291016,
+            511.55999755859375,
+            92.04000091552734
+        ],
+        "distance": 8.77076108845267,
+        "glyph_count": 5
+    },
+    {
+        "page": 1,
+        "text": "±0.25",
+        "classification": "tolerance",
+        "orientation": "vertical",
+        "text_bbox": [
+            279.2256164550781,
+            156.0048370361328,
+            283.7790222167969,
+            166.1887969970703
+        ],
+        "nearest_geometry_bbox": [
+            277.44000244140625,
+            144.1199951171875,
+            285.4800109863281,
+            172.55999755859375
+        ],
+        "distance": 2.7571453738522202,
+        "glyph_count": 5
+    },
+    {
+        "page": 1,
+        "text": "20x45",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            256.7895202636719,
+            151.44229125976562,
+            263.21783447265625,
+            167.2595977783203
+        ],
+        "nearest_geometry_bbox": [
+            254.63998413085938,
+            149.52000427246094,
+            265.55999755859375,
+            171.60000610351562
+        ],
+        "distance": 1.2128907563989602,
+        "glyph_count": 5
+    },
+    {
+        "page": 1,
+        "text": "2553",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            528.1171875,
+            771.7501220703125,
+            541.5030517578125,
+            778.3198852539062
+        ],
+        "nearest_geometry_bbox": [
+            549.47998046875,
+            754.199951171875,
+            561.3599853515625,
+            776.3999633789062
+        ],
+        "distance": 22.79336729453072,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "text": "45.5",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            318.8399658203125,
+            84.56365966796875,
+            332.9232482910156,
+            92.59889221191406
+        ],
+        "nearest_geometry_bbox": [
+            316.91998291015625,
+            84.36000061035156,
+            341.1600036621094,
+            93.36000061035156
+        ],
+        "distance": 3.1706609756815456,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "text": "1Kgs",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            52.18668746948242,
+            509.1717834472656,
+            59.21406173706055,
+            523.9357299804688
+        ],
+        "nearest_geometry_bbox": [
+            50.040000915527344,
+            510.239990234375,
+            60.959999084472656,
+            528.9600219726562
+        ],
+        "distance": 3.0528323448184445,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "text": "72.5",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            353.5648193359375,
+            212.6399688720703,
+            361.60003662109375,
+            226.72325134277344
+        ],
+        "nearest_geometry_bbox": [
+            352.91998291015625,
+            210.95999145507812,
+            362.0400085449219,
+            245.04000854492188
+        ],
+        "distance": 8.319020541565337,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "text": "14.5",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            270.351318359375,
+            77.76165771484375,
+            276.7796325683594,
+            89.02845001220703
+        ],
+        "nearest_geometry_bbox": [
+            269.4000244140625,
+            76.44000244140625,
+            277.55999755859375,
+            96.60000610351562
+        ],
+        "distance": 3.126118877334556,
+        "glyph_count": 4
+    },
+    {
+        "page": 1,
+        "text": "340",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            413.16241455078125,
+            66.68311309814453,
+            425.2296142578125,
+            74.71834564208984
+        ],
+        "nearest_geometry_bbox": [
+            411.4800109863281,
+            66.23999786376953,
+            430.44000244140625,
+            75.36000061035156
+        ],
+        "distance": 1.766783341189903,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "1:4",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            23.07972526550293,
+            499.5614318847656,
+            31.114959716796875,
+            509.5406799316406
+        ],
+        "nearest_geometry_bbox": [
+            20.880001068115234,
+            489.8399963378906,
+            33.47999954223633,
+            523.9199829101562
+        ],
+        "distance": 2.3304000873034965,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "R10",
+        "classification": "radius",
+        "orientation": "vertical",
+        "text_bbox": [
+            471.2816162109375,
+            293.2812805175781,
+            479.31683349609375,
+            308.5885314941406
+        ],
+        "nearest_geometry_bbox": [
+            470.5199890136719,
+            291.8399963378906,
+            479.760009765625,
+            311.760009765625
+        ],
+        "distance": 0.8796281300446935,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "THK",
+        "classification": "thickness",
+        "orientation": "vertical",
+        "text_bbox": [
+            488.20281982421875,
+            230.162353515625,
+            496.238037109375,
+            244.5336151123047
+        ],
+        "nearest_geometry_bbox": [
+            487.67999267578125,
+            228.36001586914062,
+            511.44000244140625,
+            247.32000732421875
+        ],
+        "distance": 7.356042774494705,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "THK",
+        "classification": "thickness",
+        "orientation": "vertical",
+        "text_bbox": [
+            487.29541015625,
+            465.359130859375,
+            496.9375915527344,
+            482.6044616699219
+        ],
+        "nearest_geometry_bbox": [
+            487.08001708984375,
+            463.55999755859375,
+            512.8800048828125,
+            485.5199890136719
+        ],
+        "distance": 7.8832972485046175,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "THK",
+        "classification": "thickness",
+        "orientation": "vertical",
+        "text_bbox": [
+            351.6400146484375,
+            471.4824523925781,
+            359.67523193359375,
+            485.853759765625
+        ],
+        "nearest_geometry_bbox": [
+            351.1199951171875,
+            469.67999267578125,
+            375.0,
+            488.6400146484375
+        ],
+        "distance": 7.418699888084954,
+        "glyph_count": 3
+    },
+    {
+        "page": 1,
+        "text": "99",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            375.2418212890625,
+            83.0027084350586,
+            383.20501708984375,
+            91.0379409790039
+        ],
+        "nearest_geometry_bbox": [
+            366.3600158691406,
+            91.19999694824219,
+            375.1199951171875,
+            95.87999725341797
+        ],
+        "distance": 10.699272688591845,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "±1",
+        "classification": "tolerance",
+        "orientation": "horizontal",
+        "text_bbox": [
+            450.3599853515625,
+            84.1187973022461,
+            455.9283142089844,
+            89.74343872070312
+        ],
+        "nearest_geometry_bbox": [
+            414.5999755859375,
+            93.47999572753906,
+            476.8800048828125,
+            93.47999572753906
+        ],
+        "distance": 9.88480540633373,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "61",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            327.6435852050781,
+            111.00069427490234,
+            349.1195373535156,
+            116.08533477783203
+        ],
+        "nearest_geometry_bbox": [
+            337.55999755859375,
+            113.27999877929688,
+            339.5999755859375,
+            117.12000274658203
+        ],
+        "distance": 1.6688247316838443,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "10",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            491.5216064453125,
+            388.16729736328125,
+            499.48480224609375,
+            396.2025146484375
+        ],
+        "nearest_geometry_bbox": [
+            487.67999267578125,
+            387.72003173828125,
+            506.6400146484375,
+            411.5999755859375
+        ],
+        "distance": 7.656505008508677,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "60",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            491.6402587890625,
+            430.045166015625,
+            499.60345458984375,
+            438.08038330078125
+        ],
+        "nearest_geometry_bbox": [
+            489.96002197265625,
+            429.5999755859375,
+            503.5199890136719,
+            438.72003173828125
+        ],
+        "distance": 1.1223681332079962,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "90",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            336.9609069824219,
+            360.20477294921875,
+            344.92413330078125,
+            368.239990234375
+        ],
+        "nearest_geometry_bbox": [
+            335.1600036621094,
+            359.760009765625,
+            348.8399963378906,
+            369.0
+        ],
+        "distance": 1.069162640943358,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "10",
+        "classification": "diameter_or_linear",
+        "orientation": "horizontal",
+        "text_bbox": [
+            328.32122802734375,
+            415.64642333984375,
+            336.2844543457031,
+            423.681640625
+        ],
+        "nearest_geometry_bbox": [
+            324.4800109863281,
+            415.1999816894531,
+            343.44000244140625,
+            439.1999816894531
+        ],
+        "distance": 7.71600515629175,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "33",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            507.1631164550781,
+            139.9189453125,
+            515.1983642578125,
+            147.88217163085938
+        ],
+        "nearest_geometry_bbox": [
+            506.4000244140625,
+            138.24000549316406,
+            515.6400146484375,
+            151.79998779296875
+        ],
+        "distance": 1.1309168860747916,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "±1",
+        "classification": "tolerance",
+        "orientation": "vertical",
+        "text_bbox": [
+            454.46026611328125,
+            149.88230895996094,
+            460.0849609375,
+            155.4565887451172
+        ],
+        "nearest_geometry_bbox": [
+            437.760009765625,
+            135.36000061035156,
+            461.760009765625,
+            158.75999450683594
+        ],
+        "distance": 9.375775118377645,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "11",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            504.3563232421875,
+            64.92231750488281,
+            510.7846374511719,
+            71.35062408447266
+        ],
+        "nearest_geometry_bbox": [
+            505.55999755859375,
+            61.68000030517578,
+            509.5199890136719,
+            62.52000045776367
+        ],
+        "distance": 6.036547399830175,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "02",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            494.31646728515625,
+            509.28643798828125,
+            505.56585693359375,
+            520.5358276367188
+        ],
+        "nearest_geometry_bbox": [
+            493.91998291015625,
+            509.6400146484375,
+            506.03997802734375,
+            521.760009765625
+        ],
+        "distance": 0.789833883889871,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "01",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            485.91534423828125,
+            559.5639038085938,
+            497.16473388671875,
+            570.813232421875
+        ],
+        "nearest_geometry_bbox": [
+            485.6400146484375,
+            559.9199829101562,
+            497.6400146484375,
+            572.0399780273438
+        ],
+        "distance": 0.7977020941934947,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "03",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            428.4365234375,
+            557.16748046875,
+            439.6859130859375,
+            568.4168701171875
+        ],
+        "nearest_geometry_bbox": [
+            428.1600036621094,
+            557.52001953125,
+            440.1600036621094,
+            569.6400146484375
+        ],
+        "distance": 0.7940108640526053,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "±1",
+        "classification": "tolerance",
+        "orientation": "vertical",
+        "text_bbox": [
+            354.7391052246094,
+            236.04299926757812,
+            360.3638000488281,
+            241.61727905273438
+        ],
+        "nearest_geometry_bbox": [
+            351.0,
+            213.0,
+            351.0,
+            275.2799987792969
+        ],
+        "distance": 8.433039031565778,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "55",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            529.6016845703125,
+            363.6006774902344,
+            537.636962890625,
+            371.5638732910156
+        ],
+        "nearest_geometry_bbox": [
+            528.8399658203125,
+            361.91998291015625,
+            537.8399658203125,
+            375.5999755859375
+        ],
+        "distance": 1.2103830871890235,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "17",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            485.32220458984375,
+            317.7611083984375,
+            493.357421875,
+            325.7243347167969
+        ],
+        "nearest_geometry_bbox": [
+            487.55999755859375,
+            331.20001220703125,
+            491.03997802734375,
+            334.67999267578125
+        ],
+        "distance": 11.197351707260767,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "19",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            485.32220458984375,
+            336.8411865234375,
+            493.357421875,
+            344.804443359375
+        ],
+        "nearest_geometry_bbox": [
+            482.760009765625,
+            318.5999755859375,
+            482.8800048828125,
+            357.3600158691406
+        ],
+        "distance": 7.112628920685574,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "55",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            380.56494140625,
+            394.8019714355469,
+            388.60015869140625,
+            402.7651672363281
+        ],
+        "nearest_geometry_bbox": [
+            379.91998291015625,
+            393.1199951171875,
+            388.91998291015625,
+            406.8000183105469
+        ],
+        "distance": 1.1876165116593989,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "17",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            313.8403015136719,
+            326.5216369628906,
+            321.8755187988281,
+            334.48486328125
+        ],
+        "nearest_geometry_bbox": [
+            313.20001220703125,
+            325.32000732421875,
+            322.44000244140625,
+            358.08001708984375
+        ],
+        "distance": 11.196826238354099,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "28",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            313.9633483886719,
+            346.20263671875,
+            321.9985656738281,
+            354.1658630371094
+        ],
+        "nearest_geometry_bbox": [
+            311.4000244140625,
+            327.239990234375,
+            324.3600158691406,
+            387.3599853515625
+        ],
+        "distance": 7.116453774965194,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "33",
+        "classification": "diameter_or_linear",
+        "orientation": "vertical",
+        "text_bbox": [
+            278.3899841308594,
+            145.80311584472656,
+            284.81829833984375,
+            152.2313995361328
+        ],
+        "nearest_geometry_bbox": [
+            275.5199890136719,
+            115.20000457763672,
+            275.5199890136719,
+            170.52000427246094
+        ],
+        "distance": 8.656135167071568,
+        "glyph_count": 2
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            528.1171875,
+            749.0549926757812,
+            534.5454711914062,
+            752.2576293945312
+        ],
+        "nearest_geometry_bbox": [
+            549.47998046875,
+            754.199951171875,
+            561.3599853515625,
+            776.3999633789062
+        ],
+        "distance": 28.190416913507516,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            24.337257385253906,
+            706.7964477539062,
+            33.979427337646484,
+            711.6002807617188
+        ],
+        "nearest_geometry_bbox": [
+            22.079999923706055,
+            705.7200317382812,
+            36.36000061035156,
+            714.9600219726562
+        ],
+        "distance": 1.1433263681939456,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "6",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            667.656005859375,
+            57.67365264892578,
+            675.6624145507812
+        ],
+        "nearest_geometry_bbox": [
+            22.200000762939453,
+            655.6799926757812,
+            33.0,
+            686.1600341796875
+        ],
+        "distance": 22.05081113508904,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            694.1522216796875,
+            57.67365264892578,
+            702.1586303710938
+        ],
+        "nearest_geometry_bbox": [
+            39.0,
+            651.3599853515625,
+            61.91999816894531,
+            783.0
+        ],
+        "distance": 19.04229847966829,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            706.1043090820312,
+            57.67365264892578,
+            714.1107177734375
+        ],
+        "nearest_geometry_bbox": [
+            39.0,
+            651.3599853515625,
+            61.91999816894531,
+            783.0
+        ],
+        "distance": 7.120039175993053,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "5",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            718.0563354492188,
+            57.67365264892578,
+            726.062744140625
+        ],
+        "nearest_geometry_bbox": [
+            39.23999786376953,
+            652.0800170898438,
+            60.47999954223633,
+            783.47998046875
+        ],
+        "distance": 4.285273529750134,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            730.1524047851562,
+            57.67365264892578,
+            738.1588134765625
+        ],
+        "nearest_geometry_bbox": [
+            39.23999786376953,
+            652.0800170898438,
+            60.47999954223633,
+            783.47998046875
+        ],
+        "distance": 16.377109400213502,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "4",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            41.60318374633789,
+            741.96044921875,
+            57.67365264892578,
+            749.9668579101562
+        ],
+        "nearest_geometry_bbox": [
+            22.31999969482422,
+            752.1600341796875,
+            36.599998474121094,
+            761.4000244140625
+        ],
+        "distance": 22.894597220550367,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            24.57772445678711,
+            753.2366943359375,
+            34.21989440917969,
+            758.04052734375
+        ],
+        "nearest_geometry_bbox": [
+            22.31999969482422,
+            752.1600341796875,
+            36.599998474121094,
+            761.4000244140625
+        ],
+        "distance": 1.1430574209115552,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            529.1244506835938,
+            -1.0795410871505737,
+            542.2487182617188,
+            5.459078788757324
+        ],
+        "nearest_geometry_bbox": [
+            526.800048828125,
+            0.23999999463558197,
+            544.800048828125,
+            7.920000076293945
+        ],
+        "distance": 1.893633568415055,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            411.40130615234375,
+            -0.12058703601360321,
+            424.52557373046875,
+            6.418033123016357
+        ],
+        "nearest_geometry_bbox": [
+            409.08001708984375,
+            0.23999999463558197,
+            427.1999816894531,
+            7.920000076293945
+        ],
+        "distance": 0.9478660635996835,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "3",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            293.80096435546875,
+            -0.24117407202720642,
+            306.92523193359375,
+            6.297445774078369
+        ],
+        "nearest_geometry_bbox": [
+            291.3600158691406,
+            0.23999999463558197,
+            309.4800109863281,
+            7.920000076293945
+        ],
+        "distance": 1.0534028725838933,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "4",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            176.0792999267578,
+            0.12058703601360321,
+            189.20358276367188,
+            6.659206867218018
+        ],
+        "nearest_geometry_bbox": [
+            173.75999450683594,
+            0.23999999463558197,
+            191.75999450683594,
+            7.920000076293945
+        ],
+        "distance": 0.7002121953152434,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            327.6435852050781,
+            116.04212188720703,
+            335.6788024902344,
+            120.04534149169922
+        ],
+        "nearest_geometry_bbox": [
+            326.8800048828125,
+            110.27999877929688,
+            336.1199951171875,
+            123.95999908447266
+        ],
+        "distance": 0.9376916678349402,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "3",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            341.0843200683594,
+            107.04068756103516,
+            349.1195373535156,
+            111.04390716552734
+        ],
+        "nearest_geometry_bbox": [
+            231.83999633789062,
+            82.55999755859375,
+            457.1999816894531,
+            137.63999938964844
+        ],
+        "distance": 1.2072222045362846,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "5",
+        "classification": "diameter_or_linear",
+        "orientation": "isolated_glyph",
+        "text_bbox": [
+            344.05487060546875,
+            147.5447998046875,
+            353.0070495605469,
+            155.08863830566406
+        ],
+        "nearest_geometry_bbox": [
+            328.32000732421875,
+            143.16000366210938,
+            358.55999755859375,
+            159.36000061035156
+        ],
+        "distance": 5.091273565373991,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "2",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            241.83541870117188,
+            660.469970703125,
+            247.32598876953125,
+            663.2054443359375
+        ],
+        "nearest_geometry_bbox": [
+            177.0,
+            661.3200073242188,
+            194.75999450683594,
+            693.0
+        ],
+        "distance": 60.66750118934342,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "0",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            231.27740478515625,
+            717.9282836914062,
+            236.76797485351562,
+            720.6637573242188
+        ],
+        "nearest_geometry_bbox": [
+            177.83999633789062,
+            699.1199951171875,
+            195.72000122070312,
+            744.5999755859375
+        ],
+        "distance": 47.312215890027524,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            146.3204803466797,
+            585.9859008789062,
+            154.355712890625,
+            589.9891357421875
+        ],
+        "nearest_geometry_bbox": [
+            141.83999633789062,
+            610.6799926757812,
+            154.44000244140625,
+            649.199951171875
+        ],
+        "distance": 42.00999875747046,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            132.28253173828125,
+            585.9386596679688,
+            140.31776428222656,
+            589.94189453125
+        ],
+        "nearest_geometry_bbox": [
+            141.83999633789062,
+            610.6799926757812,
+            154.44000244140625,
+            649.199951171875
+        ],
+        "distance": 43.63664109453955,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            118.2410659790039,
+            585.98681640625,
+            126.27629852294922,
+            589.9900512695312
+        ],
+        "nearest_geometry_bbox": [
+            76.80000305175781,
+            583.4400024414062,
+            87.60000610351562,
+            599.1600341796875
+        ],
+        "distance": 40.1953262041257,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "4",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            503.0849914550781,
+            235.56105041503906,
+            511.1202087402344,
+            239.56427001953125
+        ],
+        "nearest_geometry_bbox": [
+            487.67999267578125,
+            228.36001586914062,
+            511.44000244140625,
+            247.32000732421875
+        ],
+        "distance": 7.5477001033377125,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "4",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            503.25531005859375,
+            471.8374938964844,
+            512.8974609375,
+            476.64129638671875
+        ],
+        "nearest_geometry_bbox": [
+            487.08001708984375,
+            463.55999755859375,
+            512.8800048828125,
+            485.5199890136719
+        ],
+        "distance": 8.101952818827364,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "4",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_horizontal_fragment",
+        "text_bbox": [
+            366.64300537109375,
+            476.8833923339844,
+            374.67822265625,
+            480.8865966796875
+        ],
+        "nearest_geometry_bbox": [
+            351.1199951171875,
+            469.67999267578125,
+            375.0,
+            488.6400146484375
+        ],
+        "distance": 7.605590084450291,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "8",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            169.96315002441406,
+            483.2176208496094,
+            177.99838256835938,
+            487.2208251953125
+        ],
+        "nearest_geometry_bbox": [
+            159.24000549316406,
+            365.2799987792969,
+            197.63998413085938,
+            568.199951171875
+        ],
+        "distance": 19.009664051016173,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "1",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            169.96315002441406,
+            487.1776123046875,
+            177.99838256835938,
+            491.1808166503906
+        ],
+        "nearest_geometry_bbox": [
+            159.24000549316406,
+            365.2799987792969,
+            197.63998413085938,
+            568.199951171875
+        ],
+        "distance": 22.87802850729443,
+        "glyph_count": 1
+    },
+    {
+        "page": 1,
+        "text": "3",
+        "classification": "diameter_or_linear",
+        "orientation": "unresolved_vertical_fragment",
+        "text_bbox": [
+            169.96315002441406,
+            491.1376037597656,
+            177.99838256835938,
+            495.14080810546875
+        ],
+        "nearest_geometry_bbox": [
+            159.24000549316406,
+            365.2799987792969,
+            197.63998413085938,
+            568.199951171875
+        ],
+        "distance": 26.773197681211713,
+        "glyph_count": 1
+    }
+]
