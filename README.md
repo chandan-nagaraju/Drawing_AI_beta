@@ -4,6 +4,19 @@ Vector-driven reconstruction of engineering dimensions from PDF drawings. The sy
 
 This is **not** a generic OCR pipeline. It is **engineering grammar stabilization**: axis chains, tolerance fusion, SRC pairs, THK binding, zone filtering, and confidence scoring.
 
+## Value flow
+
+```mermaid
+flowchart TB
+  A[Engineering Drawing] --> B[Semantic Reconstruction]
+  B --> C[Manufacturing Intelligence]
+```
+
+**Meaning in practice**
+- `Engineering Drawing`: raw PDF views, dimensions, symbols, title blocks, and drafting noise.
+- `Semantic Reconstruction`: convert glyph geometry into validated dimension entities with grammar and plausibility.
+- `Manufacturing Intelligence`: machine-usable outputs for inspection planning, QA automation, and downstream CAD/CAM/PLM workflows.
+
 ---
 
 ## What it does
