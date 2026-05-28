@@ -14,14 +14,15 @@ See the main project overview: [../README.md](../README.md)
 ```bat
 cd ..
 .venv\Scripts\activate.bat
-pip install -r requirements-api.txt
+pip install -r backend/requirements-api.txt
+cd backend
 python -m uvicorn api_server:app --reload --port 8000
 ```
 
 ## 2. Start UI (port 5173)
 
 ```bat
-cd viewer
+cd frontend
 npm install
 npm run dev
 ```
@@ -30,7 +31,7 @@ Open http://localhost:5173 — upload a PDF, drag a rectangle over dimensions, J
 
 ## Flow
 
-1. Upload PDF → stored under `uploads/`
+1. Upload PDF → stored under `backend/uploads/`
 2. PDF.js renders the page (same appearance as the drawing)
 3. Mouse position → `pdfCoordinates.ts` (Fitz ↔ PDF.js viewport) → backend API
 4. Hover calls `POST /api/documents/{id}/snap`; click or drag calls `/extract`

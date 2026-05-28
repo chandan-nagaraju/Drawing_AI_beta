@@ -1,6 +1,8 @@
-uploads/
+backend/uploads/
 __pycache__/
 *.pyc
 .venv/
-viewer/node_modules/
-viewer/dist/
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+outputs/

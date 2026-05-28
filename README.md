@@ -80,21 +80,22 @@ flowchart TB
 
 | File / folder | Role |
 |---------------|------|
-| `Text_geometry.py` | CLI entry — run full-page reconstruction on a PDF |
-| `coordinate_driven_semantic_reconstruction.py` | Core pipeline: chains, SRC, modifiers, `process_page_semantic()` |
-| `Dimension_Grammar.py` | Tokenize chains; fuse `NUMBER ± NUMBER`, implicit `X`, `(REF)` |
-| `Filter_Engineering.py` | Dimension / tolerance / nominal filters |
-| `Engineering_Plausibility.py` | Tolerance and SRC plausibility limits |
-| `Export_Validation.py` | Zone filter, metadata noise, vertical digit fusion, confidence |
-| `region_semantic_extraction.py` | Region clip + hover `snap_semantic_entity()` |
-| `pdf_geometry.py` | Shared bbox intersect helpers |
-| `api_server.py` | FastAPI: upload, file serve, extract, snap |
-| `viewer/` | React + TypeScript + PDF.js interactive UI |
-| `viewer/src/pdfCoordinates.ts` | PyMuPDF ↔ PDF.js viewport coordinate bridge |
-| `uploads/` | Uploaded PDFs (gitignored) |
-| `vector_relationships*.json` | Versioned extraction outputs |
+| `backend/` | Python backend modules, FastAPI server, and uploaded docs |
+| `backend/Text_geometry.py` | CLI entry — run full-page reconstruction on a PDF |
+| `backend/coordinate_driven_semantic_reconstruction.py` | Core pipeline: chains, SRC, modifiers, `process_page_semantic()` |
+| `backend/Dimension_Grammar.py` | Tokenize chains; fuse `NUMBER ± NUMBER`, implicit `X`, `(REF)` |
+| `backend/Filter_Engineering.py` | Dimension / tolerance / nominal filters |
+| `backend/Engineering_Plausibility.py` | Tolerance and SRC plausibility limits |
+| `backend/Export_Validation.py` | Zone filter, metadata noise, vertical digit fusion, confidence |
+| `backend/region_semantic_extraction.py` | Region clip + hover `snap_semantic_entity()` |
+| `backend/pdf_geometry.py` | Shared bbox intersect helpers |
+| `backend/api_server.py` | FastAPI: upload, file serve, extract, snap |
+| `backend/uploads/` | Uploaded PDFs (gitignored) |
+| `frontend/` | React + TypeScript + PDF.js interactive UI |
+| `frontend/src/pdfCoordinates.ts` | PyMuPDF ↔ PDF.js viewport coordinate bridge |
+| `outputs/` | `vector_relationships*.json` and other extraction outputs |
 | `start_semantic_viewer.bat` | Start API + dev server (Windows) |
-| `requirements-api.txt` | FastAPI, uvicorn, PyMuPDF |
+| `backend/requirements-api.txt` | FastAPI, uvicorn, PyMuPDF |
 
 ---
 
@@ -109,7 +110,7 @@ flowchart TB
 ```bat
 .venv\Scripts\activate.bat
 pip install pymupdf
-pip install -r requirements-api.txt
+pip install -r backend/requirements-api.txt
 ```
 
 ---
@@ -118,15 +119,15 @@ pip install -r requirements-api.txt
 
 ### 1. Full-page extraction (CLI)
 
-Edit the PDF path in `Text_geometry.py` if needed, then:
+Edit the PDF path in `backend/Text_geometry.py` if needed, then:
 
 ```bat
-cd F:\beta\Drawing_AI\beta
-.venv\Scripts\activate.bat
+cd F:\beta\Drawing_AI\beta\backend
+..\.venv\Scripts\activate.bat
 python Text_geometry.py
 ```
 
-Writes `vector_relationships.json` and the next `vector_relationships_N.json` snapshot.
+Writes `outputs/vector_relationships.json` and the next `outputs/vector_relationships_N.json` snapshot.
 
 ### 2. Interactive Semantic Extraction Viewer
 
@@ -142,14 +143,16 @@ Terminal 1 — API (port 8000):
 
 ```bat
 .venv\Scripts\activate.bat
-pip install -r requirements-api.txt
+pip install -r backend/requirements-api.txt
+cd backend
+..\.venv\Scripts\activate.bat
 python -m uvicorn api_server:app --reload --port 8000
 ```
 
 Terminal 2 — UI (port 5173):
 
 ```bat
-cd viewer
+cd frontend
 npm install
 npm run dev
 ```
@@ -162,7 +165,7 @@ Open **http://localhost:5173**
 4. Or **drag** a rough box for region extraction (smart local parse).
 5. Enable **Debug bboxes** to verify red alignment boxes on the drawing.
 
-More detail: [viewer/README.md](viewer/README.md)
+More detail: [frontend/README.md](frontend/README.md)
 
 ---
 

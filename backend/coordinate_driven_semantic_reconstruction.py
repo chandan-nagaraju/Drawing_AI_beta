@@ -1339,8 +1339,8 @@ def process_page_semantic(
 
 
 def run_coordinate_driven_semantic_reconstruction(
-    pdf_path="X6C22514.pdf",
-    output_path="vector_relationships.json",
+    pdf_path="../X6C22514.pdf",
+    output_path="../outputs/vector_relationships.json",
 ):
     doc = fitz.open(pdf_path)
     all_results = []
