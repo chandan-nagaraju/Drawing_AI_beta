@@ -22,6 +22,14 @@ type Props = {
   documentId: string;
   pageNumber: number;
   onExtract?: (result: ExtractResponse) => void;
+  balloonMode?: boolean;
+  onToggleBalloonMode?: () => void;
+  balloonItems?: Array<{
+    id: string;
+    balloonNo: number;
+    page: number;
+    bbox: number[];
+  }>;
 };
 
 type HoveredEntity = {
@@ -33,6 +41,9 @@ export default function PdfSemanticViewer({
   documentId,
   pageNumber,
   onExtract,
+  balloonMode = false,
+  onToggleBalloonMode,
+  balloonItems = [],
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -51,10 +62,19 @@ export default function PdfSemanticViewer({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastBbox, setLastBbox] = useState<number[] | null>(null);
+  const [zoomInput, setZoomInput] = useState("120");
   const hoverTimerRef = useRef<number | null>(null);
   const hoverReqIdRef = useRef(0);
   const renderTaskRef = useRef<{ cancel: () => void } | null>(null);
   const renderGenRef = useRef(0);
+  const [balloonPositions, setBalloonPositions] = useState<
+    Record<string, { x: number; y: number }>
+  >({});
+  const [dragBalloon, setDragBalloon] = useState<{
+    id: string;
+    dx: number;
+    dy: number;
+  } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -88,6 +108,68 @@ export default function PdfSemanticViewer({
     }
     renderTaskRef.current = null;
   }, []);
+
+  useEffect(() => {
+    if (!dragBalloon) return;
+    const onMove = (ev: MouseEvent) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const x = (ev.clientX - rect.left) * scaleX - dragBalloon.dx;
+      const y = (ev.clientY - rect.top) * scaleY - dragBalloon.dy;
+      setBalloonPositions((prev) => ({
+        ...prev,
+        [dragBalloon.id]: { x, y },
+      }));
+    };
+    const onUp = () => setDragBalloon(null);
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, [dragBalloon]);
+
+  useEffect(() => {
+    setZoomInput(String(Math.round(scale * 100)));
+  }, [scale]);
+
+  const clampScale = (value: number) => Math.max(0.2, Math.min(5, value));
+
+  const zoomIn = useCallback(() => {
+    setScale((prev) => clampScale(prev + 0.1));
+  }, []);
+
+  const zoomOut = useCallback(() => {
+    setScale((prev) => clampScale(prev - 0.1));
+  }, []);
+
+  const zoom100 = useCallback(() => {
+    setScale(1);
+  }, []);
+
+  const fitToScreen = useCallback(async () => {
+    if (!pdf || !wrapRef.current) return;
+    const page = await pdf.getPage(pageNumber);
+    const base = page.getViewport({ scale: 1 });
+    const pad = 8;
+    const fitW = (wrapRef.current.clientWidth - pad * 2) / base.width;
+    const fitH = (window.innerHeight * 0.68) / base.height;
+    const next = clampScale(Math.min(fitW, fitH));
+    setScale(next);
+  }, [pdf, pageNumber]);
+
+  const applyZoomInput = useCallback(() => {
+    const parsed = Number.parseFloat(zoomInput);
+    if (Number.isNaN(parsed)) {
+      setZoomInput(String(Math.round(scale * 100)));
+      return;
+    }
+    setScale(clampScale(parsed / 100));
+  }, [zoomInput, scale]);
 
   const isRenderCancelled = (e: unknown) => {
     if (!(e instanceof Error)) return false;
@@ -271,21 +353,55 @@ export default function PdfSemanticViewer({
     void runExtraction(rect);
   };
 
+  const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (!e.ctrlKey) return;
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  };
+
   return (
     <div className="viewer-panel">
       <div className="viewer-toolbar">
-        <label>
-          Zoom
+        <div className="zoom-controls" role="group" aria-label="Zoom controls">
+          <button type="button" className="tool-btn" onClick={() => void fitToScreen()}>
+            Fit
+          </button>
+          <button type="button" className="tool-btn icon-btn" onClick={zoomOut}>
+            -
+          </button>
           <input
-            type="range"
-            min={0.5}
-            max={3}
-            step={0.1}
-            value={scale}
-            onChange={(e) => setScale(parseFloat(e.target.value))}
+            className="zoom-input"
+            value={zoomInput}
+            onChange={(e) => setZoomInput(e.target.value.replace(/[^\d.]/g, ""))}
+            onBlur={applyZoomInput}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                applyZoomInput();
+                (e.target as HTMLInputElement).blur();
+              }
+            }}
+            aria-label="Zoom percent"
           />
-          <span className="zoom-value">{Math.round(scale * 100)}%</span>
-        </label>
+          <span className="zoom-suffix">%</span>
+          <button type="button" className="tool-btn icon-btn" onClick={zoomIn}>
+            +
+          </button>
+          <button type="button" className="tool-btn" onClick={zoom100}>
+            100%
+          </button>
+        </div>
+        <button
+          type="button"
+          className={`tool-btn ${balloonMode ? "tool-btn-active" : ""}`}
+          onClick={onToggleBalloonMode}
+          title="Toggle balloon overlay"
+        >
+          Balloon
+        </button>
         <label className="debug-toggle">
           <input
             type="checkbox"
@@ -310,6 +426,7 @@ export default function PdfSemanticViewer({
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={onMouseUp}
+        onWheel={onWheel}
         onMouseLeave={() => {
           if (dragging) setDragging(false);
           setHoverPoint(null);
@@ -372,6 +489,51 @@ export default function PdfSemanticViewer({
             </>
             );
           })()}
+          {balloonMode &&
+            viewport &&
+            balloonItems
+              .filter((item) => item.page === pageNumber && item.bbox.length === 4)
+              .map((item) => {
+                const target = pdfBboxToScreen(item.bbox, viewport);
+                const targetCx = target.x + target.w / 2;
+                const targetCy = target.y + target.h / 2;
+                const saved = balloonPositions[item.id];
+                const bx = saved ? saved.x : targetCx + 34;
+                const by = saved ? saved.y : targetCy - 34;
+                const nodeCx = bx + 10;
+                const nodeCy = by + 10;
+                return (
+                  <div key={item.id} className="balloon-layer">
+                    <svg className="balloon-anchor" aria-hidden="true">
+                      <line x1={nodeCx} y1={nodeCy} x2={targetCx} y2={targetCy} />
+                    </svg>
+                    <div
+                      className="balloon-node"
+                      style={{ left: bx, top: by }}
+                      onMouseDown={(e) => {
+                        e.stopPropagation();
+                        const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
+                        const canvas = canvasRef.current;
+                        if (!canvas) return;
+                        const cRect = canvas.getBoundingClientRect();
+                        const scaleX = canvas.width / cRect.width;
+                        const scaleY = canvas.height / cRect.height;
+                        const localX = (e.clientX - cRect.left) * scaleX;
+                        const localY = (e.clientY - cRect.top) * scaleY;
+                        const nodeX = (rect.left - cRect.left) * scaleX;
+                        const nodeY = (rect.top - cRect.top) * scaleY;
+                        setDragBalloon({
+                          id: item.id,
+                          dx: localX - nodeX,
+                          dy: localY - nodeY,
+                        });
+                      }}
+                    >
+                      {item.balloonNo}
+                    </div>
+                  </div>
+                );
+              })}
         </div>
       </div>
       <p className="hint">

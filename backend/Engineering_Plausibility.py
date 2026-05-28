@@ -16,6 +16,12 @@ VALID_TOLERANCES = (
 MAX_ABSOLUTE_TOLERANCE = 10.0
 MAX_TOLERANCE_RATIO = 0.5  # tolerance must be < 50% of nominal
 
+# User-defined engineering caps for small nominal values:
+#   nominal < 5      -> tolerance <= 0.25
+#   5 < nominal <=10 -> tolerance <= 0.5
+SMALL_NOMINAL_TOL_CAP = 0.25
+MID_NOMINAL_TOL_CAP = 0.5
+
 # Local semantic anchor for SRC pairing (same drafting locality as THK binding).
 SRC_ANCHOR_RADIUS_MM = 2.0
 SRC_PAIR_MAX_GAP_MM = 6.0
@@ -67,6 +73,12 @@ def validate_dimension_entity(nominal, tolerance) -> bool:
     if nominal is not None:
         n = abs(float(nominal))
         if n > 0:
+            # Practical drawing-rule caps for small dimensions.
+            if n < 5.0 and tol > SMALL_NOMINAL_TOL_CAP:
+                return False
+            if 5.0 < n <= 10.0 and tol > MID_NOMINAL_TOL_CAP:
+                return False
+
             if tol >= n:
                 return False
             if tol > n * MAX_TOLERANCE_RATIO:
@@ -158,6 +170,20 @@ def is_plausible_src_dimension(left, right, tail: str = "") -> bool:
     tail_s = (tail or "").strip()
     if "°" in tail_s:
         return True
+
+    # Guard against tolerance collisions: patterns like 34 X 0.2 / 86 X 0.2
+    # are usually nominal+tolerance splits, not true SRC dimensions.
+    if right_v < 1.0 and left_v >= 5.0:
+        return False
+    if left_v < 1.0 and right_v >= 5.0:
+        return False
+    # Additional guard for tiny integer second operand (often tolerance or stray digit):
+    #   29 X 1, 62 X 1, 45 X 2 are rarely real engineering SRC dimensions.
+    if tail_s == "":
+        if left_v >= 10 and right_v <= 2 and not _is_decimal_value(right):
+            return False
+        if right_v >= 10 and left_v <= 2 and not _is_decimal_value(left):
+            return False
 
     left_strong = left_v >= 10 or _is_decimal_value(left)
     right_strong = right_v >= 10 or _is_decimal_value(right)

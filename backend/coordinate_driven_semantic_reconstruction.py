@@ -22,14 +22,84 @@ from Engineering_Plausibility import (
 )
 from Export_Validation import prepare_entities_for_export
 from pdf_geometry import bbox_center_inside, bbox_intersects
+from Geometry_Primitives import extract_geometry_primitives
 
 
 def distance(a, b):
     return math.hypot(a[0] - b[0], a[1] - b[1])
 
 
-TOLERANCE_VALUE_RE = re.compile(r"±\s*([\d.]+)")
-NOMINAL_NUMBER_RE = re.compile(r"([\d.]+)")
+TOLERANCE_VALUE_RE = re.compile(r"[±+\-−]\s*([\d]+(?:[.,]\d+)?)")
+NOMINAL_NUMBER_RE = re.compile(r"([\d]+(?:[.,]\d+)?)")
+
+
+def normalize_decimal_text(text: str) -> str:
+    return (text or "").replace(",", ".")
+
+
+def normalize_font_family(font_name: str) -> str:
+    name = (font_name or "").strip()
+    if not name:
+        return ""
+    name = re.sub(
+        r"[-,_\s]*(Bold|Italic|Oblique|MT|Regular|Medium|Black|Light|Semibold)+",
+        "",
+        name,
+        flags=re.I,
+    )
+    return name.lower()
+
+
+def infer_font_weight(font_name: str) -> str:
+    name = (font_name or "").lower()
+    if any(k in name for k in ("bold", "black", "heavy")):
+        return "bold"
+    if any(k in name for k in ("light", "thin")):
+        return "light"
+    return "regular"
+
+
+def infer_normalized_token_type(text: str) -> str:
+    t = (text or "").strip().upper()
+    if t in {"±", "+", "-", "−", "\u00b1"}:
+        return "PLUS_MINUS"
+    if re.match(r"^\d+(?:[.,]\d+)?$", t):
+        return "NUMERIC"
+    if t == "THK":
+        return "THK"
+    if t == "R":
+        return "R_PREFIX"
+    if t == "Ø":
+        return "DIAMETER_PREFIX"
+    return "OTHER"
+
+
+def normalize_operator_glyph_char(ch: str) -> str:
+    t = (ch or "").strip()
+    # Common PDF fallback for ± in some embedded fonts.
+    if t in {"�", "\ufffd"}:
+        return "±"
+    return ch
+
+
+def canonicalize_display_text(entity_type: str, text: str) -> str:
+    t = normalize_decimal_text((text or "").strip())
+    # Normalize broken plus-minus glyphs from mixed PDF encodings.
+    t = t.replace("�", "±")
+    t = t.replace("\u00b1", "±")
+    # Normalize OCR / font fallback for diameter prefix.
+    t = re.sub(r"^O(?=\s*\d)", "Ø", t, flags=re.I)
+    t = re.sub(r"\s+", " ", t)
+    # Normalize tolerance operator variants and spacing:
+    #   34±0.2, 34 ±0.2, 34± 0.2, 34 ± 0.2 -> 34±0.2
+    t = re.sub(r"\s*(?:\+/-|\+/\-|±)\s*", "±", t)
+    t = re.sub(r"\s*[Xx×]\s*", "X", t)
+    t = re.sub(r"\b(\d+(?:\.\d+)?)\s*THK\b", r"\1THK", t, flags=re.I)
+    t = re.sub(r"\bTHK\s*(\d+(?:\.\d+)?)\b", r"\1THK", t, flags=re.I)
+    t = re.sub(r"(THK)+$", "THK", t, flags=re.I)
+    t = re.sub(r"^R\s+", "R", t, flags=re.I)
+    t = re.sub(r"^Ø\s+", "Ø", t, flags=re.I)
+    return t
 
 
 def classify_entity_type(text):
@@ -48,23 +118,46 @@ def classify_entity_type(text):
 
 
 def parse_tolerance_modifier(text):
-    match = TOLERANCE_VALUE_RE.search(text)
-    if not match:
+    t = (text or "").strip()
+    if not t:
         return None
 
-    value = float(match.group(1))
+    # Explicit tolerance token: ±0.2, +0.2, -0.2
+    explicit = re.match(r"^[±+\-−]\s*([\d]+(?:[.,]\d+)?)$", t)
+    if explicit:
+        value = float(normalize_decimal_text(explicit.group(1)))
+        return {
+            "type": "tolerance",
+            "value": f"±{format_nominal_for_display(value)}",
+            "tolerance_type": "bilateral",
+            "plus": value,
+            "minus": -value,
+        }
+
+    # Implicit tolerance recovery: decimal like 0.2 / 0,2 that lost ± glyph.
+    implicit = re.match(r"^([\d]+(?:[.,]\d+)?)$", t)
+    if not implicit:
+        return None
+    t_norm = normalize_decimal_text(implicit.group(1))
+    if "." not in t_norm:
+        return None
+    value = float(t_norm)
+    if not (0 < value <= 1.0):
+        return None
     return {
         "type": "tolerance",
-        "value": f"±{match.group(1)}",
+        "value": f"±{format_nominal_for_display(value)}",
         "tolerance_type": "bilateral",
         "plus": value,
         "minus": -value,
+        "implicit": True,
     }
 
 
 def parse_nominal_value(text):
     without_tol = TOLERANCE_VALUE_RE.sub("", text).strip()
-    without_tol = re.sub(r"^[RØ]\s*", "", without_tol, flags=re.I)
+    without_tol = re.sub(r"^[RØO]\s*", "", without_tol, flags=re.I)
+    without_tol = normalize_decimal_text(without_tol)
     match = NOMINAL_NUMBER_RE.search(without_tol)
     if not match:
         return None, without_tol
@@ -72,6 +165,10 @@ def parse_nominal_value(text):
         return float(match.group(1)), without_tol.strip()
     except ValueError:
         return None, without_tol.strip()
+
+
+def normalize_decimal_display(text):
+    return (text or "").replace(",", ".")
 
 
 def compute_limits(nominal_value, tolerance_mod):
@@ -115,6 +212,8 @@ def build_dimension_entity(candidate, modifiers=None):
                 "text_bbox": candidate["bbox"],
                 "center": candidate["center"],
                 "glyph_count": candidate["glyph_count"],
+                "font_size": candidate.get("font_size"),
+                "font_family": candidate.get("font_family"),
             }
 
     # Explicit operator reconstruction: NUMBER X NUMBER (or using ×) inside extracted text.
@@ -154,6 +253,8 @@ def build_dimension_entity(candidate, modifiers=None):
                 "text_bbox": candidate["bbox"],
                 "center": candidate.get("center"),
                 "glyph_count": candidate["glyph_count"],
+                "font_size": candidate.get("font_size"),
+                "font_family": candidate.get("font_family"),
             }
 
     if candidate.get("grammar_fused") and candidate.get("tolerance_value") is not None:
@@ -188,6 +289,8 @@ def build_dimension_entity(candidate, modifiers=None):
             "text_bbox": candidate["bbox"],
             "center": candidate["center"],
             "glyph_count": candidate["glyph_count"],
+            "font_size": candidate.get("font_size"),
+            "font_family": candidate.get("font_family"),
         }
 
     tol = parse_tolerance_modifier(text)
@@ -231,6 +334,8 @@ def build_dimension_entity(candidate, modifiers=None):
         "text_bbox": candidate["bbox"],
         "center": candidate["center"],
         "glyph_count": candidate["glyph_count"],
+        "font_size": candidate.get("font_size"),
+        "font_family": candidate.get("font_family"),
     }
 
 
@@ -266,7 +371,7 @@ def find_nearest_nominal_parent(modifier, nominals, tolerance_mod, max_dist=60):
             if d > max_dist:
                 continue
             dy = abs(modifier["center"][1] - nominal["center"][1])
-            if dy > 12:
+            if dy > 22:
                 continue
             # Left → right: tolerance must be to the right of nominal.
             dx = modifier["center"][0] - nominal["center"][0]
@@ -280,6 +385,222 @@ def find_nearest_nominal_parent(modifier, nominals, tolerance_mod, max_dist=60):
     return best
 
 
+def is_small_decimal_candidate(text: str) -> bool:
+    t = normalize_decimal_text((text or "").strip())
+    if not re.match(r"^0\.\d+$", t):
+        return False
+    try:
+        v = float(t)
+    except ValueError:
+        return False
+    return 0 < v <= 1.0
+
+
+def _is_operator_token_text(text: str) -> bool:
+    t = (text or "").strip()
+    return t in {"±", "+", "-", "−", "\u00b1"}
+
+
+def _forward_axis_delta(src, dst, axis) -> float:
+    """
+    Positive means dst is in forward reading direction from src.
+    horizontal: left->right
+    vertical: bottom->top (PDF y decreases upward)
+    """
+    if axis == "vertical":
+        return float(src["center"][1]) - float(dst["center"][1])
+    return float(dst["center"][0]) - float(src["center"][0])
+
+
+def _cross_axis_delta(src, dst, axis) -> float:
+    if axis == "vertical":
+        return abs(float(src["center"][0]) - float(dst["center"][0]))
+    return abs(float(src["center"][1]) - float(dst["center"][1]))
+
+
+def _style_compatible(a, b, size_tol=1.8):
+    fa = (a.get("font_family") or "").strip().lower()
+    fb = (b.get("font_family") or "").strip().lower()
+    if fa and fb and fa != fb:
+        return False
+    sa = float(a.get("font_size") or 0.0)
+    sb = float(b.get("font_size") or 0.0)
+    if sa > 0 and sb > 0:
+        if abs(sa - sb) > size_tol:
+            ratio = min(sa, sb) / max(sa, sb)
+            # Allow superscript/subscript-like tolerance tokens (same family, smaller size).
+            if ratio < 0.55:
+                return False
+    return True
+
+
+def _plain_tolerance_token_value(text: str):
+    t = normalize_decimal_text((text or "").strip())
+    if not re.match(r"^\d+(?:\.\d+)?$", t):
+        return None
+    try:
+        v = float(t)
+    except ValueError:
+        return None
+    # Practical standalone tolerance token range.
+    if not (0 < v <= 4.0):
+        return None
+    return v
+
+
+def attach_strict_axis_tolerances(entities, raw_candidates):
+    """
+    Strict local pattern:
+      NOMINAL -> OPERATOR(+/-/±) -> TOLERANCE_VALUE
+    Constraints:
+      - same page, same dimension_axis, same axis_bucket
+      - forward direction only (never opposite)
+      - compact spacing (operator must be immediately after nominal)
+      - tolerance immediately after operator
+    """
+    if not entities or not raw_candidates:
+        return
+
+    op_tokens = []
+    value_tokens = []
+    for cand in raw_candidates:
+        txt = (cand.get("text") or "").strip()
+        if not txt:
+            continue
+        if _is_operator_token_text(txt):
+            op_tokens.append(cand)
+            continue
+        if parse_tolerance_modifier(txt) or _plain_tolerance_token_value(txt) is not None:
+            value_tokens.append(cand)
+
+    if not op_tokens or not value_tokens:
+        return
+
+    for parent in entities:
+        if parent.get("nominal") is None:
+            continue
+        if any(m.get("type") == "tolerance" for m in parent.get("modifiers", [])):
+            continue
+
+        axis = parent.get("dimension_axis", "horizontal")
+        page = parent.get("page")
+        if axis not in {"horizontal", "vertical"}:
+            continue
+
+        # Tight operator locality; "right after nominal", same axis line.
+        max_nominal_to_op = 42.0 if axis == "horizontal" else 48.0
+        max_cross = 10.0 if axis == "horizontal" else 12.0
+        op_best = None
+        op_best_score = float("inf")
+        for op in op_tokens:
+            if op.get("page") != page:
+                continue
+            if op.get("dimension_axis") != axis:
+                continue
+            if _forward_axis_delta(parent, op, axis) <= 0:
+                continue
+            fwd = _forward_axis_delta(parent, op, axis)
+            cross = _cross_axis_delta(parent, op, axis)
+            if fwd > max_nominal_to_op or cross > max_cross:
+                continue
+            if not _style_compatible(parent, op):
+                continue
+            score = fwd + 0.5 * cross
+            if score < op_best_score:
+                op_best_score = score
+                op_best = op
+
+        if not op_best:
+            continue
+
+        # Tight tolerance locality; immediate next to operator, same axis line.
+        max_op_to_tol = 44.0 if axis == "horizontal" else 52.0
+        tol_best = None
+        tol_best_score = float("inf")
+        for val in value_tokens:
+            if val.get("page") != page:
+                continue
+            if val.get("dimension_axis") != axis:
+                continue
+            if _forward_axis_delta(op_best, val, axis) <= 0:
+                continue
+            fwd = _forward_axis_delta(op_best, val, axis)
+            cross = _cross_axis_delta(op_best, val, axis)
+            if fwd > max_op_to_tol or cross > max_cross:
+                continue
+            if not _style_compatible(parent, val):
+                continue
+            score = fwd + 0.5 * cross
+            if score < tol_best_score:
+                tol_best_score = score
+                tol_best = val
+
+        if not tol_best:
+            continue
+
+        op_text = (op_best.get("text") or "").strip()
+        tol_text = normalize_decimal_text((tol_best.get("text") or "").strip())
+        if op_text in {"\u00b1"}:
+            op_text = "±"
+        composed = f"{op_text}{tol_text}"
+        tol = parse_tolerance_modifier(composed)
+        if not tol:
+            continue
+        if not validate_dimension_entity(parent.get("nominal"), tol.get("plus")):
+            continue
+
+        parent["modifiers"].append(tol)
+        parent["display_text"] = f"{parent['nominal_text']} {tol['value']}".strip()
+        parent["limits"] = compute_limits(parent["nominal"], tol)
+        merge_parts = [parent["text_bbox"]]
+        if op_best.get("bbox"):
+            merge_parts.append(op_best["bbox"])
+        if tol_best.get("bbox"):
+            merge_parts.append(tol_best["bbox"])
+        parent["text_bbox"] = merge_bbox(merge_parts)
+        parent["glyph_count"] += int(op_best.get("glyph_count", 1)) + int(tol_best.get("glyph_count", 1))
+        cx = (parent["text_bbox"][0] + parent["text_bbox"][2]) / 2
+        cy = (parent["text_bbox"][1] + parent["text_bbox"][3]) / 2
+        parent["center"] = [cx, cy]
+
+
+def find_nearest_nominal_for_implicit_decimal(modifier, nominals, tolerance_mod, max_dist=55):
+    """
+    Recover implicit tolerance where ± glyph was dropped (e.g. 50.7 + 0.2).
+    Uses a slightly looser same-line tolerance than explicit ± binding.
+    """
+    best = None
+    best_score = float("inf")
+    for nominal in nominals:
+        if nominal.get("nominal") is None:
+            continue
+        if nominal.get("page") != modifier.get("page"):
+            continue
+
+        d = distance(modifier["center"], nominal["center"])
+        if d > max_dist * 1.2:
+            continue
+
+        dx_signed = modifier["center"][0] - nominal["center"][0]
+        dx_abs = abs(dx_signed)
+        dy_signed = nominal["center"][1] - modifier["center"][1]
+        dy_abs = abs(dy_signed)
+
+        horizontal_ok = (d <= max_dist) and (dx_signed >= 0) and (dy_abs <= 24)
+        vertical_ok = (d <= max_dist * 1.2) and (dy_signed >= 0) and (dx_abs <= 24)
+        if not (horizontal_ok or vertical_ok):
+            continue
+
+        horiz_score = d + 0.2 * dy_abs if horizontal_ok else float("inf")
+        vert_score = d + 0.2 * dx_abs if vertical_ok else float("inf")
+        score = min(horiz_score, vert_score)
+
+        if score < best_score:
+            best_score = score
+            best = nominal
+    return best
+
+
 def attach_modifiers_to_dimensions(candidates):
     """
     STAGE 6 — Parent-child semantic binding.
@@ -289,15 +610,29 @@ def attach_modifiers_to_dimensions(candidates):
     """
     entities = []
     pending_modifiers = []
+    pending_implicit_small_decimals = []
+    raw_candidates = []
 
     for cand in candidates:
         text = cand["text"].strip()
+        norm_text = normalize_decimal_text(text)
+        raw_candidates.append(cand)
 
-        if is_grammar_operator(text) or is_tolerance_operator(text):
+        if _is_operator_token_text(text):
             continue
 
-        if is_tolerance_modifier(text):
+        tol_probe = parse_tolerance_modifier(norm_text)
+        # Explicit ± tokens and recovered small decimals can act as modifiers.
+        if tol_probe and (
+            is_tolerance_modifier(text)
+            or norm_text.startswith(("+", "-", "±", "−"))
+            or tol_probe.get("implicit")
+        ):
             pending_modifiers.append(cand)
+            continue
+
+        if is_small_decimal_candidate(norm_text):
+            pending_implicit_small_decimals.append(cand)
             continue
 
         if cand.get("grammar_fused"):
@@ -308,6 +643,9 @@ def attach_modifiers_to_dimensions(candidates):
             continue
 
         entities.append(build_dimension_entity(cand))
+
+    # Strict deterministic operator binding first (axis + direction + locality).
+    attach_strict_axis_tolerances(entities, raw_candidates)
 
     for mod in pending_modifiers:
         tol = parse_tolerance_modifier(mod["text"])
@@ -321,6 +659,57 @@ def attach_modifiers_to_dimensions(candidates):
         if any(m["type"] == "tolerance" for m in parent["modifiers"]):
             continue
 
+        if not validate_dimension_entity(parent.get("nominal"), tol.get("plus")):
+            continue
+
+        parent["modifiers"].append(tol)
+        parent["display_text"] = f"{parent['nominal_text']} {tol['value']}".strip()
+        parent["limits"] = compute_limits(parent["nominal"], tol)
+        parent["text_bbox"] = merge_bbox([parent["text_bbox"], mod["bbox"]])
+        parent["glyph_count"] += mod["glyph_count"]
+        cx = (parent["text_bbox"][0] + parent["text_bbox"][2]) / 2
+        cy = (parent["text_bbox"][1] + parent["text_bbox"][3]) / 2
+        parent["center"] = [cx, cy]
+
+    # Implicit tolerance recovery:
+    # if bare 0.2 appears tightly aligned to a nominal on same axis, attach as ±0.2.
+    for mod in pending_implicit_small_decimals:
+        t = normalize_decimal_text(mod["text"])
+        try:
+            val = float(t)
+        except ValueError:
+            continue
+        tol = {
+            "type": "tolerance",
+            "value": f"±{format_nominal_for_display(val)}",
+            "tolerance_type": "bilateral",
+            "plus": val,
+            "minus": -val,
+            "implicit": True,
+        }
+        parent = find_nearest_nominal_for_implicit_decimal(mod, entities, tol, max_dist=55)
+        if not parent:
+            # Fallback for dropped ± glyph cases: attach to nearest nominal if local.
+            best = None
+            best_d = float("inf")
+            for cand_parent in entities:
+                if cand_parent.get("page") != mod.get("page"):
+                    continue
+                if cand_parent.get("nominal") is None:
+                    continue
+                if any(m.get("type") == "tolerance" for m in cand_parent.get("modifiers", [])):
+                    continue
+                d = distance(mod["center"], cand_parent["center"])
+                if d < best_d and d <= 70:
+                    best_d = d
+                    best = cand_parent
+            parent = best
+        if not parent:
+            continue
+        if parent.get("nominal") is None:
+            continue
+        if any(m.get("type") == "tolerance" for m in parent["modifiers"]):
+            continue
         if not validate_dimension_entity(parent.get("nominal"), tol.get("plus")):
             continue
 
@@ -349,6 +738,9 @@ def sanitize_dimension_entity(entity):
     entity["modifiers"] = valid_mods
     tol = next((m for m in valid_mods if m["type"] == "tolerance"), None)
 
+    entity["nominal_text"] = normalize_decimal_display(entity.get("nominal_text", ""))
+    entity["display_text"] = normalize_decimal_display(entity.get("display_text", ""))
+
     if tol:
         entity["display_text"] = f"{entity['nominal_text']} {tol['value']}".strip()
         entity["limits"] = compute_limits(entity.get("nominal"), tol)
@@ -368,6 +760,32 @@ def sanitize_dimension_entity(entity):
             entity["display_text"] = f"{entity['nominal_text']} {tol['value']}".strip()
         else:
             entity["display_text"] = entity.get("nominal_text", "").strip()
+
+    # Engineering formatting rule: diameter dimension must display with leading `Ø`.
+    if entity.get("entity_type") == "diameter_dimension":
+        nominal_text = (entity.get("nominal_text") or "").strip()
+        nominal_text = re.sub(r"^[Oo]\s*", "Ø", nominal_text)
+        if nominal_text and not nominal_text.startswith("Ø"):
+            nominal_text = f"Ø{nominal_text}"
+        entity["nominal_text"] = nominal_text
+        tol = next((m for m in valid_mods if m.get("type") == "tolerance"), None)
+        if tol:
+            entity["display_text"] = f"{entity['nominal_text']} {tol['value']}".strip()
+        else:
+            entity["display_text"] = entity.get("nominal_text", "").strip()
+
+    if entity.get("entity_type") == "thickness_dimension":
+        nominal_text = (entity.get("nominal_text") or "").strip()
+        nominal_text = re.sub(r"\s*THK\s*$", "", nominal_text, flags=re.I)
+        entity["nominal_text"] = nominal_text
+        if nominal_text:
+            entity["display_text"] = f"{nominal_text} THK"
+        entity["semantic_locked"] = True
+
+    entity["display_text"] = canonicalize_display_text(
+        entity.get("entity_type", ""),
+        entity.get("display_text", ""),
+    )
 
     return entity
 
@@ -399,8 +817,10 @@ def adaptive_thresholds(glyphs):
     return {
         "line_tol": max(0.5 * med_h, 2),
         "col_tol": max(0.35 * med_w, 2),
-        "h_gap_max": max(1.8 * med_w, 6),
-        "v_gap_max": max(1.8 * med_h, 6),
+        # Cap chain-link gaps so dense drawings don't collapse distant labels
+        # into giant axis chains.
+        "h_gap_max": min(max(1.5 * med_w, 5), 28),
+        "v_gap_max": min(max(1.2 * med_h, 5), 14),
         "size_tol": max(0.35 * med_h, 0.5),
         "max_chain_len": 12,
     }
@@ -423,8 +843,14 @@ class UnionFind:
 
 
 def same_text_group(a, b, size_tol):
-    if a["font"] != b["font"]:
-        return False
+    fam_a = a.get("font_family") or normalize_font_family(a.get("font", ""))
+    fam_b = b.get("font_family") or normalize_font_family(b.get("font", ""))
+    if fam_a and fam_b and fam_a != fam_b:
+        # Keep operator inference style-agnostic (bold ± should still fuse).
+        a_type = a.get("normalized_type") or infer_normalized_token_type(a.get("char", ""))
+        b_type = b.get("normalized_type") or infer_normalized_token_type(b.get("char", ""))
+        if "PLUS_MINUS" not in {a_type, b_type}:
+            return False
     return abs(a["size"] - b["size"]) <= size_tol
 
 
@@ -473,10 +899,15 @@ def split_chain_by_spacing(group, axis):
 
     med_gap = median(gaps) or 1
     chunks = [[ordered[0]]]
+    chunk_start_coord = ordered[0]["cy"] if axis == "vertical" else ordered[0]["cx"]
+    max_span = 120 if axis == "vertical" else 220
     for i in range(1, len(ordered)):
         gap = gaps[i - 1]
-        if gap > 2.2 * med_gap:
+        cur_coord = ordered[i]["cy"] if axis == "vertical" else ordered[i]["cx"]
+        span = abs(cur_coord - chunk_start_coord)
+        if gap > 2.2 * med_gap or span > max_span:
             chunks.append([ordered[i]])
+            chunk_start_coord = cur_coord
         else:
             chunks[-1].append(ordered[i])
     return chunks
@@ -798,6 +1229,19 @@ def reconstruct_dimension_chain(glyphs, registry=None):
         if is_tolerance_operator(g["char"]) or is_grammar_operator(g["char"]):
             used_glyph_ids.add(gid)
             registry.consume_glyphs([g], page)
+            axis = g["dimension_axis"]
+            chains.append({
+                "glyphs": [g],
+                "text": g["char"],
+                "orientation": classify_singleton_fragment(g, glyphs, thresholds),
+                "dimension_axis": axis,
+                "axis_bucket": g["axis_bucket"],
+                "reading_direction": reading_direction_for_axis(axis),
+                "glyph_count": 1,
+                "bbox": g["bbox"],
+                "grammar_fused": False,
+                "grammar_rule": "OPERATOR_SINGLETON",
+            })
             continue
 
         used_glyph_ids.add(gid)
@@ -916,8 +1360,36 @@ def entity_center_from_bbox(ent):
     return None
 
 
+def _line_axis_compatible(geom, axis):
+    if geom.get("geometry_type") not in {"line", "centerline"}:
+        return False
+    bbox = geom.get("bbox") or []
+    if len(bbox) != 4:
+        return False
+    w = abs(bbox[2] - bbox[0])
+    h = abs(bbox[3] - bbox[1])
+    # Dimension ownership should align with chain axis.
+    if axis == "vertical":
+        return h >= max(10.0, 1.5 * w)
+    return w >= max(10.0, 1.5 * h)
+
+
+def nearest_owner_primitive(candidate, page_primitives, axis):
+    center = entity_center_from_bbox(candidate)
+    if not center or not page_primitives:
+        return None, float("inf")
+
+    compatible = [g for g in page_primitives if _line_axis_compatible(g, axis)]
+    if not compatible:
+        return None, float("inf")
+
+    best = min(compatible, key=lambda g: distance(center, g["center"]))
+    return best, distance(center, best["center"])
+
+
 def reconstruct_src_dimensions_local(
     candidates,
+    page_primitives_by_page=None,
     registry=None,
     anchor_radius_mm=SRC_ANCHOR_RADIUS_MM,
     pair_max_gap_mm=SRC_PAIR_MAX_GAP_MM,
@@ -1001,6 +1473,20 @@ def reconstruct_src_dimensions_local(
             if gap <= 0 or gap > max_pair_gap_pt:
                 continue
 
+            # Geometry ownership gate:
+            # both numeric tokens must belong to the same local dimension line primitive.
+            page = left.get("page", 1)
+            page_prims = (page_primitives_by_page or {}).get(page, [])
+            owner_l, dist_l = nearest_owner_primitive(left, page_prims, axis)
+            owner_r, dist_r = nearest_owner_primitive(right, page_prims, axis)
+            owner_radius_pt = mm_to_points(anchor_radius_mm * 1.4)
+            if not owner_l or not owner_r:
+                continue
+            if owner_l.get("primitive_id") != owner_r.get("primitive_id"):
+                continue
+            if dist_l > owner_radius_pt or dist_r > owner_radius_pt:
+                continue
+
             w_left = la[2] - la[0]
             w_right = ra[2] - ra[0]
             min_operator_gap = 0.35 * max(w_left, w_right, 1.0)
@@ -1023,7 +1509,6 @@ def reconstruct_src_dimensions_local(
             ):
                 continue
 
-            page = left.get("page", 1)
             if not registry.register_src_pair(page, v1, v2, axis):
                 continue
 
@@ -1085,6 +1570,8 @@ def fuse_thickness_keywords(entities, distance_mm=2.0):
 
     thickness_tokens = []
     for e in entities:
+        if e.get("semantic_locked"):
+            continue
         disp = (e.get("display_text") or "").upper().strip()
         nom = (e.get("nominal_text") or "").upper().strip()
         if e.get("entity_type") == "thickness_dimension" and ((disp == "THK") or (nom == "THK")):
@@ -1092,7 +1579,11 @@ def fuse_thickness_keywords(entities, distance_mm=2.0):
 
     numeric_entities = [
         e for e in entities
-        if e.get("nominal") is not None and e.get("entity_type") != "thickness_dimension"
+        if e.get("nominal") is not None
+        and e.get("entity_type") != "thickness_dimension"
+        and not e.get("semantic_locked")
+        and "THK" not in ((e.get("display_text") or "").upper())
+        and "THK" not in ((e.get("nominal_text") or "").upper())
     ]
 
     if not thickness_tokens:
@@ -1146,6 +1637,7 @@ def fuse_thickness_keywords(entities, distance_mm=2.0):
         best["entity_type"] = "thickness_dimension"
         best["nominal_text"] = format_nominal_for_display(best.get("nominal"))
         best["display_text"] = f"{best['nominal_text']} THK"
+        best["semantic_locked"] = True
 
         # Expand bbox/center to cover both tokens.
         if thk.get("text_bbox") and best.get("text_bbox"):
@@ -1168,6 +1660,98 @@ def fuse_thickness_keywords(entities, distance_mm=2.0):
     return out
 
 
+def attach_symbol_prefixes_to_dimensions(entities, glyphs, max_gap_pt=16.0):
+    """
+    Recover symbol-prefixed dimensions when prefix glyphs are detached from numeric tokens.
+    Example: R + 10 -> R10, Ø + 8 -> Ø8
+    """
+    if not entities or not glyphs:
+        return entities
+
+    symbol_glyphs = []
+    for g in glyphs:
+        ch = (g.get("char") or "").strip()
+        if not ch:
+            continue
+        up = ch.upper()
+        if up in {"R", "Ø", "O"}:
+            symbol_glyphs.append((up, g))
+
+    if not symbol_glyphs:
+        return entities
+
+    numeric_entities = []
+    for ent in entities:
+        if ent.get("nominal") is None:
+            continue
+        if ent.get("entity_type") in {"radius_dimension", "diameter_dimension", "thickness_dimension"}:
+            continue
+        bb = ent.get("text_bbox") or ent.get("bbox")
+        if not bb:
+            continue
+        numeric_entities.append(ent)
+
+    if not numeric_entities:
+        return entities
+
+    used_symbols = set()
+    for idx, (sym, sg) in enumerate(symbol_glyphs):
+        sb = sg.get("bbox")
+        if not sb:
+            continue
+        sx0, sy0, sx1, sy1 = sb
+        syc = (sy0 + sy1) / 2.0
+
+        best = None
+        best_score = float("inf")
+        for ent in numeric_entities:
+            eb = ent.get("text_bbox") or ent.get("bbox")
+            if not eb:
+                continue
+            ex0, ey0, ex1, ey1 = eb
+            eh = max(ey1 - ey0, 1.0)
+            eyc = (ey0 + ey1) / 2.0
+
+            # Prefix symbol should be on the left side of the numeric text.
+            if sx0 >= ex0:
+                continue
+            # Allow slight overlap due tight CAD kerning (R50, Ø8).
+            gap = max(0.0, ex0 - sx1)
+            if gap > max_gap_pt:
+                continue
+            if abs(syc - eyc) > max(0.8 * eh, 10.0):
+                continue
+
+            score = gap + abs(syc - eyc) * 0.25
+            if score < best_score:
+                best_score = score
+                best = ent
+
+        if not best:
+            continue
+
+        used_symbols.add(idx)
+        nominal_text = format_nominal_for_display(best.get("nominal"))
+        if sym == "R":
+            best["entity_type"] = "radius_dimension"
+            best["nominal_text"] = f"R{nominal_text}"
+            best["display_text"] = best["nominal_text"]
+        else:
+            best["entity_type"] = "diameter_dimension"
+            best["nominal_text"] = f"Ø{nominal_text}"
+            best["display_text"] = best["nominal_text"]
+
+        if best.get("text_bbox"):
+            best["text_bbox"] = merge_bbox([best["text_bbox"], [sx0, sy0, sx1, sy1]])
+            best["bbox"] = best.get("text_bbox")
+            tb = best["text_bbox"]
+            best["center"] = [(tb[0] + tb[2]) / 2.0, (tb[1] + tb[3]) / 2.0]
+        best["glyph_count"] = int(best.get("glyph_count") or 0) + 1
+        best["grammar_rule"] = best.get("grammar_rule") or "PREFIX_SYMBOL_ATTACH"
+
+    return entities
+
+
 def _glyph_in_region(glyph, region_bbox, glyph_mode="intersects"):
     if not region_bbox:
         return True
@@ -1187,7 +1771,7 @@ def _extract_page_glyphs(page, page_index, region_bbox=None, glyph_mode="interse
         for line in block.get("lines", []):
             for span in line.get("spans", []):
                 for ch in span.get("chars", []):
-                    text = ch.get("c", "")
+                    text = normalize_operator_glyph_char(ch.get("c", ""))
                     if not text.strip():
                         continue
 
@@ -1195,16 +1779,171 @@ def _extract_page_glyphs(page, page_index, region_bbox=None, glyph_mode="interse
                     glyph = {
                         "page": page_index,
                         "char": text,
+                        "normalized_char": text,
                         "bbox": [x0, y0, x1, y1],
                         "cx": (x0 + x1) / 2,
                         "cy": (y0 + y1) / 2,
                         "font": span.get("font", ""),
+                        "font_family": normalize_font_family(span.get("font", "")),
+                        "font_weight": infer_font_weight(span.get("font", "")),
+                        "normalized_type": infer_normalized_token_type(text),
                         "size": span.get("size", 0),
                     }
                     if _glyph_in_region(glyph, region_bbox, glyph_mode):
                         glyphs.append(glyph)
 
     return glyphs
+
+
+def extract_all_direction_span_entities(page, page_index, region_bbox=None):
+    """
+    Fallback extractor for non-axis-aligned dimension text.
+    Captures rotated labels (e.g. R6 at arbitrary angles) and direct THK spans.
+    """
+    text_data = page.get_text("dict")
+    entities = []
+
+    for block in text_data.get("blocks", []):
+        if block.get("type") != 0:
+            continue
+
+        for line in block.get("lines", []):
+            line_dir = line.get("dir") or (1.0, 0.0)
+            dx, dy = float(line_dir[0]), float(line_dir[1])
+            angle = math.degrees(math.atan2(dy, dx))
+            angle_mod = abs(angle) % 180.0
+            near_horizontal = angle_mod <= 12.0 or angle_mod >= 168.0
+            near_vertical = abs(angle_mod - 90.0) <= 12.0
+            rotated = not (near_horizontal or near_vertical)
+
+            for span in line.get("spans", []):
+                raw_text = (span.get("text") or "").strip()
+                if not raw_text:
+                    continue
+                if len(raw_text) > 24:
+                    continue
+
+                bbox = span.get("bbox")
+                if not bbox or len(bbox) != 4:
+                    continue
+                span_bbox = [bbox[0], bbox[1], bbox[2], bbox[3]]
+                if region_bbox and not bbox_intersects(span_bbox, region_bbox):
+                    continue
+
+                norm = normalize_decimal_text(raw_text).upper()
+                has_digit = any(ch.isdigit() for ch in norm)
+                if not has_digit:
+                    continue
+
+                # Keep this pass high-precision to avoid metadata pollution.
+                looks_radius = bool(re.match(r"^R\s*\d", norm))
+                looks_diameter = "Ø" in norm
+                looks_thk = "THK" in norm
+                looks_tol = "±" in norm
+                if not (looks_radius or looks_diameter or looks_thk or (rotated and looks_tol)):
+                    continue
+
+                candidate = {
+                    "page": page_index,
+                    "text": raw_text,
+                    "orientation": "rotated",
+                    "dimension_axis": "angled",
+                    "axis_bucket": round(((span_bbox[0] + span_bbox[2]) / 2) / 10),
+                    "reading_direction": "angle_locked",
+                    "glyph_count": max(1, len(raw_text.replace(" ", ""))),
+                    "bbox": span_bbox,
+                    "center": [(span_bbox[0] + span_bbox[2]) / 2, (span_bbox[1] + span_bbox[3]) / 2],
+                    "grammar_fused": False,
+                    "grammar_rule": "ALL_DIRECTION_SPAN_FALLBACK",
+                }
+                entities.append(build_dimension_entity(candidate))
+
+    return entities
+
+
+def extract_nearby_thickness_entities(page, page_index, region_bbox=None):
+    """
+    Build explicit thickness entities from nearby numeric + THK spans.
+    Handles layouts where '3' and 'THK' are split into separate text spans.
+    """
+    text_data = page.get_text("dict")
+    number_spans = []
+    thk_spans = []
+
+    for block in text_data.get("blocks", []):
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", []):
+            for span in line.get("spans", []):
+                text = (span.get("text") or "").strip()
+                if not text:
+                    continue
+                bbox = span.get("bbox")
+                if not bbox or len(bbox) != 4:
+                    continue
+                b = [bbox[0], bbox[1], bbox[2], bbox[3]]
+                if region_bbox and not bbox_intersects(b, region_bbox):
+                    continue
+
+                t_upper = text.upper()
+                if "THK" in t_upper:
+                    thk_spans.append({"text": text, "bbox": b})
+                elif re.match(r"^\d+(?:[.,]\d+)?$", text):
+                    number_spans.append({"text": text, "bbox": b})
+
+    entities = []
+    for thk in thk_spans:
+        tb = thk["bbox"]
+        tc = [(tb[0] + tb[2]) / 2.0, (tb[1] + tb[3]) / 2.0]
+        best = None
+        best_score = float("inf")
+        for num in number_spans:
+            nb = num["bbox"]
+            nc = [(nb[0] + nb[2]) / 2.0, (nb[1] + nb[3]) / 2.0]
+            dx = abs(nc[0] - tc[0])
+            dy = abs(nc[1] - tc[1])
+            d = distance(nc, tc)
+            if d > 26:
+                continue
+            if dx > 22 or dy > 22:
+                continue
+            score = d + 0.2 * min(dx, dy)
+            if score < best_score:
+                best_score = score
+                best = num
+
+        if not best:
+            continue
+
+        try:
+            nominal_val = float(normalize_decimal_text(best["text"]))
+        except Exception:
+            nominal_val = None
+        if nominal_val is None:
+            continue
+
+        merged = merge_bbox([best["bbox"], tb])
+        display = f"{format_nominal_for_display(nominal_val)} THK"
+        entities.append({
+            "page": page_index,
+            "entity_type": "thickness_dimension",
+            "display_text": display,
+            "nominal": nominal_val,
+            "nominal_text": format_nominal_for_display(nominal_val),
+            "modifiers": [],
+            "limits": None,
+            "orientation": "rotated",
+            "dimension_axis": "angled",
+            "axis_bucket": round(((merged[0] + merged[2]) / 2) / 10),
+            "reading_direction": "angle_locked",
+            "grammar_rule": "NEARBY_THK_SPAN_FALLBACK",
+            "text_bbox": merged,
+            "bbox": merged,
+            "center": [(merged[0] + merged[2]) / 2.0, (merged[1] + merged[3]) / 2.0],
+            "glyph_count": max(4, len(display.replace(" ", ""))),
+        })
+
+    return entities
 
 
 def _entity_to_export_record(ent):
@@ -1232,9 +1971,54 @@ def _entity_to_export_record(ent):
         "direction_locked": ent.get("direction_locked"),
         "text_bbox": ent["text_bbox"],
         "nearest_geometry_bbox": ent.get("nearest_geometry_bbox"),
+        "nearest_geometry_type": ent.get("nearest_geometry_type"),
+        "nearest_geometry_id": ent.get("nearest_geometry_id"),
         "distance": ent.get("distance"),
         "glyph_count": ent["glyph_count"],
     }
+
+
+def choose_nearest_geometry_for_entity(entity, page_primitives):
+    """
+    Geometry-aware nearest primitive selection.
+    Radius / diameter entities should prefer arc-like primitives over generic lines.
+    """
+    if not page_primitives:
+        return None, float("inf")
+
+    entity_type = entity.get("entity_type")
+    preferred_types = set()
+    if entity_type in {"radius_dimension", "diameter_dimension"}:
+        preferred_types = {"circle_or_arc", "curve"}
+    elif entity_type in {"linear_dimension", "SRC_dimension", "thickness_dimension"}:
+        preferred_types = {"line", "centerline"}
+
+    best = None
+    best_score = float("inf")
+    best_dist = float("inf")
+
+    if preferred_types:
+        preferred = [g for g in page_primitives if g.get("geometry_type") in preferred_types]
+        if preferred:
+            pref_best = min(preferred, key=lambda g: distance(entity["center"], g["center"]))
+            pref_dist = distance(entity["center"], pref_best["center"])
+            # For radius/diameter anchoring, prefer arc-like primitives if reasonably local.
+            if entity_type in {"radius_dimension", "diameter_dimension"} and pref_dist <= 160.0:
+                return pref_best, pref_dist
+
+    for geom in page_primitives:
+        dist = distance(entity["center"], geom["center"])
+        penalty = 0.0
+        gtype = geom.get("geometry_type")
+        if preferred_types and gtype not in preferred_types:
+            penalty = 40.0
+        score = dist + penalty
+        if score < best_score:
+            best_score = score
+            best_dist = dist
+            best = geom
+
+    return best, best_dist
 
 
 def process_page_semantic(
@@ -1247,6 +2031,11 @@ def process_page_semantic(
 ):
     """Reconstruct exportable dimension entities for one PDF page (optional region clip)."""
     glyphs = _extract_page_glyphs(page, page_index, region_bbox, glyph_mode)
+    page_drawings = extract_geometry_primitives(
+        page,
+        region_bbox=region_bbox,
+        intersects_fn=bbox_intersects if region_bbox else None,
+    )
 
     chain_registry = DirectionalChainRegistry()
     chains = reconstruct_dimension_chain(glyphs, registry=chain_registry)
@@ -1256,21 +2045,19 @@ def process_page_semantic(
         word = chain["text"].strip()
         if not word:
             continue
-        if is_grammar_operator(word) or is_tolerance_operator(word):
-            continue
-        if not chain.get("grammar_fused") and not is_dimension(word):
-            continue
 
         bbox = chain["bbox"]
         center_x = (bbox[0] + bbox[2]) / 2
         center_y = (bbox[1] + bbox[3]) / 2
 
-        candidates.append({
+        candidate = {
             "page": page_index,
             "text": word,
             "bbox": bbox,
             "center": [center_x, center_y],
             "glyph_count": chain["glyph_count"],
+            "font_size": median([g.get("size", 0) for g in chain.get("glyphs", [])]) if chain.get("glyphs") else None,
+            "font_family": (chain.get("glyphs", [{}])[0].get("font_family") if chain.get("glyphs") else ""),
             "orientation": chain["orientation"],
             "dimension_axis": chain.get("dimension_axis", "horizontal"),
             "axis_bucket": chain.get("axis_bucket"),
@@ -1285,41 +2072,41 @@ def process_page_semantic(
             "values": chain.get("values"),
             "chain_id": chain.get("chain_id"),
             "direction_locked": chain.get("direction_locked"),
-        })
+        }
 
-    candidates = reconstruct_src_dimensions_local(candidates, registry=chain_registry)
+        # Keep explicit operator tokens as candidates so strict tolerance matcher
+        # can bind NOMINAL -> OPERATOR -> VALUE locally on the same axis.
+        if is_grammar_operator(word) or is_tolerance_operator(word):
+            candidates.append(candidate)
+            continue
+        if not chain.get("grammar_fused") and not is_dimension(word):
+            continue
+
+        candidates.append(candidate)
+
+    candidates = reconstruct_src_dimensions_local(
+        candidates,
+        page_primitives_by_page={page_index: page_drawings},
+        registry=chain_registry,
+    )
     entities = attach_modifiers_to_dimensions(candidates)
+    entities.extend(extract_all_direction_span_entities(page, page_index, region_bbox=region_bbox))
+    entities.extend(extract_nearby_thickness_entities(page, page_index, region_bbox=region_bbox))
+    entities = [sanitize_dimension_entity(ent) for ent in entities]
+    entities = attach_symbol_prefixes_to_dimensions(entities, glyphs)
     entities = deduplicate_entities(entities)
-    entities = fuse_thickness_keywords(entities, distance_mm=2.0)
-
-    page_drawings = []
-    for d in page.get_drawings():
-        rect = d["rect"]
-        geom_bbox = [rect.x0, rect.y0, rect.x1, rect.y1]
-        if region_bbox:
-            if not bbox_intersects(geom_bbox, region_bbox):
-                continue
-        center_x = (rect.x0 + rect.x1) / 2
-        center_y = (rect.y0 + rect.y1) / 2
-        page_drawings.append({
-            "page": page_index,
-            "bbox": geom_bbox,
-            "center": [center_x, center_y],
-            "items": d.get("items"),
-            "fill": d.get("fill"),
-            "color": d.get("color"),
-        })
+    entities = fuse_thickness_keywords(entities, distance_mm=8.0)
 
     for ent in entities:
-        nearest = None
-        nearest_dist = float("inf")
-        for geom in page_drawings:
-            dist = distance(ent["center"], geom["center"])
-            if dist < nearest_dist:
-                nearest_dist = dist
-                nearest = geom
+        nearest, nearest_dist = choose_nearest_geometry_for_entity(ent, page_drawings)
         ent["distance"] = nearest_dist
         ent["nearest_geometry_bbox"] = nearest["bbox"] if nearest else None
+        ent["nearest_geometry_type"] = nearest.get("geometry_type") if nearest else None
+        ent["nearest_geometry_id"] = nearest.get("primitive_id") if nearest else None
+        if nearest and ent.get("entity_type") in {"radius_dimension", "diameter_dimension"}:
+            ent["anchor_center"] = nearest.get("center")
+            if ent.get("anchor_radius_mm") is None and ent.get("nominal") is not None:
+                ent["anchor_radius_mm"] = ent.get("nominal")
 
     entities = prepare_entities_for_export(
         entities,
@@ -1341,6 +2128,7 @@ def process_page_semantic(
 def run_coordinate_driven_semantic_reconstruction(
     pdf_path="../X6C22514.pdf",
     output_path="../outputs/vector_relationships.json",
+    versioned_only=True,
 ):
     doc = fitz.open(pdf_path)
     all_results = []
@@ -1349,11 +2137,12 @@ def run_coordinate_driven_semantic_reconstruction(
         page_index = page_num + 1
         all_results.extend(process_page_semantic(page, page_index))
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_results, f, indent=4, ensure_ascii=False)
+    if versioned_only:
+        target_path = next_versioned_output_path(output_path)
+    else:
+        target_path = Path(output_path)
 
-    versioned_path = next_versioned_output_path(output_path)
-    with open(versioned_path, "w", encoding="utf-8") as f:
+    with open(target_path, "w", encoding="utf-8") as f:
         json.dump(all_results, f, indent=4, ensure_ascii=False)
 
     return all_results

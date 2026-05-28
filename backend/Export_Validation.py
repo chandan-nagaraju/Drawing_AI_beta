@@ -71,6 +71,7 @@ def is_orphan_keyword(text: str) -> bool:
 
 def compute_export_confidence(entity) -> float:
     score = 1.0
+    entity_type = entity.get("entity_type")
 
     if entity.get("reconstructed_operator"):
         score *= 0.92
@@ -83,10 +84,17 @@ def compute_export_confidence(entity) -> float:
 
     geom_dist = entity.get("distance")
     if geom_dist is not None:
-        if geom_dist > SRC_MAX_GEOMETRY_DISTANCE:
-            score *= 0.35
-        elif geom_dist > 12:
-            score *= 0.75
+        if entity_type in {"radius_dimension", "diameter_dimension"}:
+            # Radius/diameter callouts are often offset from arc center by leader geometry.
+            if geom_dist > 180:
+                score *= 0.5
+            elif geom_dist > 120:
+                score *= 0.75
+        else:
+            if geom_dist > SRC_MAX_GEOMETRY_DISTANCE:
+                score *= 0.35
+            elif geom_dist > 12:
+                score *= 0.75
 
     if entity.get("entity_type") == "SRC_dimension" and geom_dist and geom_dist > 12:
         score *= 0.55
@@ -103,6 +111,10 @@ def compute_export_confidence(entity) -> float:
 def should_export_entity(entity, page_rect, min_confidence=0.35, skip_zone_filter=False) -> bool:
     text = (entity.get("display_text") or entity.get("nominal_text") or "").strip()
     orientation = entity.get("orientation") or ""
+
+    # Drop control / non-printable garbage fragments early.
+    if any(ord(ch) < 32 for ch in text):
+        return False
 
     if orientation.startswith("unresolved"):
         return False
@@ -121,6 +133,7 @@ def should_export_entity(entity, page_rect, min_confidence=0.35, skip_zone_filte
         "SRC_dimension",
         "radius_dimension",
         "diameter_dimension",
+        "thickness_dimension",
     ):
         return False
 
@@ -128,6 +141,20 @@ def should_export_entity(entity, page_rect, min_confidence=0.35, skip_zone_filte
         geom_dist = entity.get("distance")
         if geom_dist is not None and geom_dist > SRC_MAX_GEOMETRY_DISTANCE:
             return False
+
+        # Decimal-vs-SRC final guard for implicit operator reconstruction.
+        # If compact NN + N slipped through grammar as SRC, reject at export.
+        values = entity.get("values") or []
+        rule = (entity.get("grammar_rule") or "").upper()
+        if len(values) == 2 and "IMPLICIT_X_BETWEEN_NUMBERS" in rule:
+            try:
+                left = int(values[0])
+                right = int(values[1])
+            except Exception:
+                left = right = None
+            if left is not None and right is not None:
+                if left >= 10 and 0 <= right <= 9:
+                    return False
 
     confidence = compute_export_confidence(entity)
     entity["confidence"] = confidence

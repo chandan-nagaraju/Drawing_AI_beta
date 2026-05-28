@@ -135,6 +135,36 @@ body {
   font-size: inherit;
 }
 
+.meta-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.meta-btn {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: #0f172a;
+  border-radius: 6px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meta-btn:hover {
+  background: #f8fafc;
+}
+
+.print-notice {
+  margin: 0;
+  padding: 0.45rem 1.5rem;
+  font-size: 0.78rem;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-bottom: 1px solid #bfdbfe;
+}
+
 .workspace {
   flex: 1;
   display: grid;
@@ -185,6 +215,144 @@ body {
   color: #334155;
   font-family: "Cascadia Code", "Consolas", monospace;
   background: #fafbfc;
+}
+
+.balloon-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  color: #334155;
+}
+
+.balloon-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+  padding: 0.55rem 0.7rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.balloon-table tbody td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.undo-bar {
+  margin: 0.5rem 0.75rem 0;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #991b1b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.undo-btn {
+  border: 1px solid #fda4af;
+  background: #fff;
+  color: #b91c1c;
+  border-radius: 6px;
+  padding: 0.18rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.undo-btn:hover {
+  background: #ffe4e6;
+}
+
+.reject-btn {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0;
+  border-radius: 4px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.86rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.reject-btn:hover {
+  background: #dc2626;
+}
+
+.restore-btn {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0;
+  border-radius: 4px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.78rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.restore-btn:hover {
+  background: #1d4ed8;
+}
+
+.balloon-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.balloon-table tbody tr.active {
+  background: #eff6ff;
+}
+
+.balloon-table tbody tr.rejected-row {
+  opacity: 0.6;
+}
+
+.table-controls {
+  padding: 0.5rem 0.75rem 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.show-rejected-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.show-rejected-toggle input {
+  accent-color: var(--accent);
+}
+
+.table-order-btn {
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: #0f172a;
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.table-order-btn:hover {
+  background: #f8fafc;
 }
 
 .entity-count {
@@ -276,14 +444,60 @@ body {
   font-weight: 500;
 }
 
-.viewer-toolbar input[type="range"] {
-  width: 100px;
-  accent-color: var(--accent);
+.zoom-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.2rem;
 }
 
-.viewer-toolbar .zoom-value {
-  min-width: 2.5rem;
+.tool-btn {
+  height: 1.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: #0f172a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0 0.55rem;
+  cursor: pointer;
+}
+
+.tool-btn:hover {
+  background: #f8fafc;
+}
+
+.tool-btn-active {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.icon-btn {
+  width: 1.85rem;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.zoom-input {
+  width: 3rem;
+  height: 1.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.zoom-suffix {
+  font-size: 0.75rem;
   color: var(--text-muted);
+  min-width: 0.7rem;
 }
 
 .status {
@@ -324,6 +538,46 @@ body {
   left: 0;
   top: 0;
   pointer-events: none;
+}
+
+.balloon-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.balloon-anchor {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.balloon-anchor line {
+  stroke: #0284c7;
+  stroke-width: 1.2;
+}
+
+.balloon-node {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #0ea5e9;
+  border: 1.5px solid #0369a1;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+}
+
+.balloon-node:active {
+  cursor: grabbing;
 }
 
 .selection-rect {
@@ -407,4 +661,84 @@ body {
   border-radius: 8px;
   color: var(--danger);
   font-size: 0.875rem;
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  body,
+  .app {
+    background: #fff !important;
+  }
+
+  .app {
+    min-height: auto !important;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .app-header,
+  .meta-bar,
+  .json-panel,
+  .viewer-toolbar,
+  .hint,
+  .error-banner,
+  .print-notice {
+    display: none !important;
+  }
+
+  .workspace {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .viewer-column {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  .viewer-panel {
+    gap: 0 !important;
+  }
+
+  .canvas-wrap {
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .pdf-canvas {
+    display: block !important;
+  }
+
+  .balloon-node {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    border-width: 2px;
+    background: #0284c7 !important;
+  }
+
+  .balloon-anchor line {
+    stroke-width: 2px;
+  }
 }
