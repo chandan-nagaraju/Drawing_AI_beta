@@ -28,7 +28,7 @@ flowchart TB
 | **Grammar fusion** | `50.7 ±0.2`, implicit `17 X 28`, `(REF)` suffixes, inline tolerances |
 | **Plausibility** | Rejects impossible tolerances, weak SRC pairs, metadata noise |
 | **Export validation** | Title-block zones, orphan THK, vertical digit fusion, confidence scores |
-| **Interactive UI** | Upload PDF, hover-snap, click-to-select, region extract, live JSON panel |
+| **Interactive UI** | Upload PDF, hover-snap, click-to-select, region extract, balloon table + overlay |
 
 ---
 
@@ -56,7 +56,7 @@ Upload PDF
     → hover snap / click or drag region
     → Fitz bbox → PDF.js viewport transform → screen overlay
     → region_semantic_extraction (same engine, clipped bbox)
-    → JSON in side panel
+    → cumulative inspection balloon workspace
 ```
 
 ```mermaid
@@ -163,7 +163,12 @@ Open **http://localhost:5173**
 2. **Hover** near a dimension — blue snap highlight + tooltip.
 3. **Click** to select and export JSON for that entity.
 4. Or **drag** a rough box for region extraction (smart local parse).
-5. Enable **Debug bboxes** to verify red alignment boxes on the drawing.
+5. Balloon table updates cumulatively (dedupe + stable balloon numbers).
+6. Reject / restore rows for human validation (soft delete, undo).
+7. Enable **Balloon** mode to place draggable numbered balloons on the drawing.
+8. Use **Clockwise Order** to renumber balloons around the geometry spread.
+9. Use **Save Ballooned PDF** / **Print Ballooned** for drawing-only print output.
+10. Enable **Debug bboxes** to verify red alignment boxes on the drawing.
 
 More detail: [frontend/README.md](frontend/README.md)
 
@@ -190,7 +195,7 @@ Bboxes use **PyMuPDF coordinates** (origin top-left, Y increases downward). The 
 {
   "page": 1,
   "entity_type": "linear_dimension",
-  "display_text": "50.7 ±0.2",
+  "display_text": "50.7±0.2",
   "nominal": 50.7,
   "nominal_text": "50.7",
   "modifiers": [
@@ -215,7 +220,7 @@ Bboxes use **PyMuPDF coordinates** (origin top-left, Y increases downward). The 
 }
 ```
 
-Other `entity_type` values include `SRC_dimension`, `radius_dimension`, `thickness_dimension`, `reference_dimension`.
+Other `entity_type` values include `SRC_dimension`, `radius_dimension`, `diameter_dimension`, `thickness_dimension`, `reference_dimension`.
 
 ---
 
@@ -225,8 +230,10 @@ Other `entity_type` values include `SRC_dimension`, `radius_dimension`, `thickne
 2. **Direction is locked** per chain (no mirrored `17 X 28` / `28 X 17` duplicates).
 3. **SRC and THK** use local anchor radius (~2 mm) — not global proximity.
 4. **Unresolved fragments** (`unresolved_vertical_fragment`, single-digit orphans) are filtered before export on full-page runs.
-5. **Human-assisted locality** in the viewer avoids title block, watermark, and cross-view noise.
-6. **Never map PyMuPDF bboxes directly to CSS** — always go through `viewport.convertToViewportRectangle()` with the Fitz ↔ PDF Y-flip in `pdfCoordinates.ts`.
+5. **THK entities are semantic-locked** after fusion (`6THKTHK` recursion blocked).
+6. **Operator binding is local and axis-locked** (`NOMINAL -> (+/-/±) -> TOL`) with forward direction constraints.
+7. **Human-assisted locality** in the viewer avoids title block, watermark, and cross-view noise.
+8. **Never map PyMuPDF bboxes directly to CSS** — always go through `viewport.convertToViewportRectangle()` with the Fitz ↔ PDF Y-flip in `pdfCoordinates.ts`.
 
 ---
 
@@ -260,6 +267,9 @@ The viewer module `pdfCoordinates.ts` performs the Fitz ↔ PDF.js bridge and re
 | Export validation & noise reduction | Stable |
 | Interactive viewer + API | Stable |
 | Hover snap + click select | Stable |
+| Inspection balloon table + soft reject/restore | Stable |
+| Balloon overlay + drag + clockwise renumber | Stable |
+| Ballooned print/save (drawing-only print CSS) | Stable |
 | Coordinate overlay alignment | Fixed via `pdfCoordinates.ts` |
 | CAD-style semantic layer (all entities pre-indexed) | Planned |
 
@@ -274,7 +284,7 @@ Add your project license here if applicable.
 Run the viewer build before UI changes:
 
 ```bat
-cd viewer
+cd frontend
 npm run build
 ```
 

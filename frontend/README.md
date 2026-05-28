@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 — upload a PDF, drag a rectangle over dimensions, JSON appears in the right panel.
+Open http://localhost:5173 — upload a PDF, extract dimensions, then review in the inspection balloon table.
 
 ## Flow
 
@@ -36,4 +36,9 @@ Open http://localhost:5173 — upload a PDF, drag a rectangle over dimensions, J
 3. Mouse position → `pdfCoordinates.ts` (Fitz ↔ PDF.js viewport) → backend API
 4. Hover calls `POST /api/documents/{id}/snap`; click or drag calls `/extract`
 5. Overlays use `convertToViewportRectangle()`; highlights stay aligned on zoom
-6. JSON appears in the right panel; enable **Debug bboxes** to verify red alignment
+6. Right panel is a cumulative balloon table (`Balloon`, `Parameter`, `Value`, `Action`)
+7. Rows support soft reject, undo, show rejected, and restore
+8. **Clockwise Order** renumbers balloons around the drawing spread
+9. **Balloon** mode overlays draggable balloon numbers with anchor lines
+10. **Save Ballooned PDF** / **Print Ballooned** print only the drawing + balloons
+11. Enable **Debug bboxes** to verify red alignment
